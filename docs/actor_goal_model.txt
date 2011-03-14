@@ -1,0 +1,26 @@
+Actor-Goal Model
+
+Actor                            Goal
+------                           ----
+
+ * Sistem Yöneticisi
+                                - Otel Ekleme/Değiştirme/Çıkartma
+                                - Otel Yöneticisi Ekleme/Değiştirme/Çıkartma
+
+ * Müşteri
+                                - Kendisini Sisteme Ekleme/Değiştirme/Çıkartma
+                                - Rezervasyon Yapma/İptal
+                                - Oda Kiralama
+
+ * Turizm Acentası
+                                - Oda(lar) Rezervasyonu Yapma/İptal
+                                - Oda(lar) Kiralama
+
+ * Resepsiyonist
+                                - Müşteri Ekleme/Değiştirme/Çıkartma
+                                - Rezervasyon Yapma/İptal
+                                - Oda Kiralama/İptal
+
+ * Otel Yöneticisi
+                                - Oda Ekleme/Değiştirme/Çıkartma
+                                - Otel Aktivitesi Ekleme/Değiştirme/Çıkartma
