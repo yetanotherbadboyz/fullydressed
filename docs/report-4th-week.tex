@@ -1,13 +1,14 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{report}
 \usepackage{graphicx}
 \usepackage[utf8x]{inputenc}
 \usepackage[turkish]{babel}
 \usepackage{fullpage}
+\usepackage{multirow}
 
 \begin{document}
 
 \begin{description}
-\item[Projenin Konusu:] Otel Rezervasyon Sistemi
+\item[Projenin Konusu:] Otel Rezervasyon Sistemi \\[1cm]
 \end{description}
 {
 \bf
@@ -48,11 +49,10 @@ Sisteme kaydedilen ve yetkilendirilen turizm acentaları tarafından da resepsiy
 
 \end{itemize}
 
-\bf {
+{
+\bf
 Projenin Taslağı \\[0.2cm]
 }
-
-\normalfont {
 
 Aşağıdakiler sistemin barındıracağı maddelerdir.
 
@@ -67,6 +67,20 @@ Aşağıdakiler sistemin barındıracağı maddelerdir.
 
 \end{itemize}
 
+\newpage
+
+{
+\bf
+Actor-Goal Model \\[1cm]
 }
+\begin{tabular}{p{5cm} p{9cm}}
+Actor & Goal \\ \hline
+\multirow{2}{*}{Sistem Yöneticisi} 
+& 
+Otel Ekleme/Değiştirme/Çıkartma \\
+&
+Otel Yöneticisi Ekleme/Değiştirme/Çıkartma \\
+
+\end{tabular}
 
 \end{document}
