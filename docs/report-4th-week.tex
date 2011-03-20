@@ -81,7 +81,8 @@ Actor-Goal Model \\[1cm]
 \begin{tabular}{ |p{5cm} | p{9cm} |}
 
 \hline
-Actor & Goal \\ \hline
+\bf Actor & \bf Goal \\ 
+\hline
 
 \multirow{2}{*}{Sistem Yöneticisi}
 & 
@@ -135,14 +136,42 @@ Otel Aktivitesi Ekleme/Değiştirme/Çıkartma \\
 \item[Use Case 1:] Müşteri Ekleme \\
 \item[Scope:] Otel Rezervasyon Sistemi
 \item[Level:] User Goal
-\item[Primary Actor:] Resepsiyonist \\
-\item[Stakeholders and Interests:]
-\begin{description}
+\item[Primary Actor:] Resepsiyonist 
+\item[Stakeholders and Interests:] \hspace{10 mm}
+\begin{description} 
 \item[Resepsiyonist:] Müşterinin herhangi bir anahtar verisine göre 
 (TC Kimlik No, OpenID, eposta) kaydını yapmak ister. Daha sonra bu 
 müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \item[Müşteri:] Kaydının karışıklığa yol açmayacak şekilde tanımlanmasını istemektedir.
 \end{description}
+\item[Preconditions:] \hspace{10mm}
+\begin{itemize}
+\item Otel sistemde kayıtlı olmalı.
+\item Resepsiyonist sistemde kayıtlı ve yetkiye sahip olmalı.
+\item Resepsiyonist sisteme giriş yapmış olmalı.
+\item Aynı ID'li başka bir müşteri eklenmemiş olmalı.
+\end{itemize}
+
+\item[Postconditions:] \hspace{10mm}
+\begin{itemize}
+\item Müşteri daha sonra erişebileceği anahtar verilerle eklenmiş olmalı.
+\end{itemize}
+\item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
+\begin{enumerate}
+\item Müşteri otele gelir ve resepsiyoniste talebini iletir.
+\item Resepsiyonist yeni bir kayıt işlemi başlatır.
+\item Resepsiyonist müşteriden gerekli olan bilgileri temin eder.
+\item Resepsiyonist verilen bilgilerin kanıtlanmasını talep eder.
+\item Resepsiyonist bilgileri sisteme girer ve kayıt işlemini sisteme iletir.
+\end{enumerate}
+\item[Extensions (or Alternative Flows):] \hspace{10mm}
+\begin{itemize}
+\item[4a.] Müşteri kimliğini kanıtlayamaz ise
+    \begin{enumerate} 
+    \item Kayıt işlemi tamamlanmadan iptal edilir.
+    \end{enumerate}
+\end{itemize}
+
 \end{description}
 
 
