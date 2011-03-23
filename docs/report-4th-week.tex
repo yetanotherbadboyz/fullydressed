@@ -166,6 +166,10 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{enumerate}
 \item[Extensions (or Alternative Flows):] \hspace{10mm}
 \begin{itemize}
+\item[*a] Senaryodaki herhangi bir ölümcül hatada:
+    \begin{enumerate}
+    \item Bütün işlemler ipyal edilip her şey baştan yazılır.
+    \end{enumerate}
 \item[4a.] Müşteri kimliğini kanıtlayamaz ise
     \begin{enumerate} 
     \item Kayıt işlemi tamamlanmadan iptal edilir.
@@ -174,5 +178,187 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 
 \end{description}
 
+\newpage
+\begin{description}
+\item[Use Case 2:] Oda Kiralama \\
+\item[Scope:] Otel Rezervasyon Sistemi
+\item[Level:] User Goal
+\item[Primary Actor:] Resepsiyonist 
+\item[Stakeholders and Interests:] \hspace{10 mm}
+\begin{description} 
+\item[Resepsiyonist:] Oda kiralama işleminin her şeyiyle birlikte sorunsuz ve kolayca yapılabilmesini bekler
+\item[Müşteri:] Oda kiralama işleminin yapılmasını bekler.
+\item[Sistem Yöneticisi:] Oda kiralama işlemindeki bilgilerin eksiksiz olmasını bekler.
+\end{description}
+\item[Preconditions:] \hspace{10mm}
+\begin{itemize}
+\item Resepsiyonist sistemde kayıtlı ve yetkiye sahip olmalı.
+\item Resepsiyonist sisteme giriş yapmış olmalı.
+\item Sistemde en az bir otel olmalı.
+\item Sistemde boş en az bir oda olmalı.
+\item Müşteri sisteme kayıtlı olmalı.
+\end{itemize}
+
+\item[Postconditions:] \hspace{10mm}
+\begin{itemize}
+\item Oda kiralanmış ve müşteri ile ilişkilendirilmiş olmalı.
+\end{itemize}
+\item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
+\begin{enumerate}
+\item Müşteri otele gelir ve resepsiyoniste talebini iletir.
+\item Resepsiyonist yeni bir kayıt işlemi başlatır.
+\item Resepsiyonist müşteriden gerekli olan bilgileri temin eder.
+\item Resepsiyonist verilen bilgilerin kanıtlanmasını talep eder.
+\item Resepsiyonist bilgileri sisteme girer ve kayıt işlemini sisteme iletir.
+\end{enumerate}
+\item[Extensions (or Alternative Flows):] \hspace{10mm}
+\begin{itemize}
+\item[*a] Senaryodaki herhangi bir ölümcül hatada:
+    \begin{enumerate}
+    \item Bütün işlemler ipyal edilip her şey baştan yazılır.
+    \end{enumerate}
+\item[3a] Müşteri sisteme kayıtlı değilse:
+    \begin{enumerate}
+    \item Yeni müşteri oluşturulup bu adımdan devam edilir.
+    \end{enumerate}
+\item[4a] Müşteriye uygun oda yoksa:
+    \begin{enumerate} 
+    \item Kayıt işlemi tamamlanmadan iptal edilir.
+    \end{enumerate}
+\item[6a] Ödeme yapılmazsa
+    \begin{enumerate}
+    \item İşlem iptal edilir.
+    \end{enumerate}
+\end{itemize}
+\end{description}
+
+\newpage
+\begin{description}
+\item[Use Case 3:] Oda Ekleme \\
+\item[Scope:] Otel Rezervasyon Sistemi
+\item[Level:] User Goal
+\item[Primary Actor:] Sistem Yöneticisi 
+\item[Stakeholders and Interests:] \hspace{10 mm}
+\begin{description} 
+\item[Sistem Yöneticisi:] Odanın tanımlanması ile ilgili herhangi bir eksiklik olmamasını ister.
+\end{description}
+\item[Preconditions:] \hspace{10mm}
+\begin{itemize}
+\item Otel sistemde kayıtlı olmalı.
+\item Sistem yöneticisi sisteme kayıtlı ve giriş yapmış olmalı
+\end{itemize}
+
+\item[Postconditions:] \hspace{10mm}
+\begin{itemize}
+\item Oda rezervasyona hazır olmalı
+\end{itemize}
+\item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
+\begin{enumerate}
+\item Sistem yöneticisi oda eklemek için yeni bir işlem başlatır.
+\item Odanın numarasını ve diğer özelliklerini sisteme girer.
+\item İşlem tamamlanır.
+\end{enumerate}
+\item[Extensions (or Alternative Flows):] \hspace{10mm}
+\begin{itemize}
+\item[*a] Senaryodaki herhangi bir ölümcül hatada:
+    \begin{enumerate}
+    \item Bütün işlemler ipyal edilip her şey baştan yazılır.
+    \end{enumerate}
+\item[2a] Aynı numaralı başka bir oda varsa:
+    \begin{enumerate}
+    \item Sistem yöneticiden başka bir oda numarası ister.
+    \item Eşsiz bir oda numarası girilinceye kadar 2a tekrarlanır.
+    \item İşlem kaldığı yerden devam eder.
+    \end{enumerate}
+\end{itemize}
+\end{description}
+
+\newpage
+\begin{description}
+\item[Use Case 4:] Oda Ekleme \\
+\item[Scope:] Otel Rezervasyon Sistemi
+\item[Level:] User Goal
+\item[Primary Actor:] Sistem Yöneticisi 
+\item[Stakeholders and Interests:] \hspace{10 mm}
+\begin{description} 
+\item[Sistem Yöneticisi:] Otelin özelliklerinin doğru tanımlanmış olmasını bekler.
+\end{description}
+\item[Preconditions:] \hspace{10mm}
+\begin{itemize}
+\item Sistem yöneticisi sisteme kayıtlı ve giriş yapmış olmalı.
+\end{itemize}
+
+\item[Postconditions:] \hspace{10mm}
+\begin{itemize}
+\item Otel sisteme tüm özellikleri ile kaydedilmiş olmalı.
+\end{itemize}
+\item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
+\begin{enumerate}
+\item Sistem yöneticisi yeni bir otel kaydı başlatır.
+\item Otel için gerekli bilgiler istenir.
+\item Sistem yöneticisi gerekli bilgileri girer.
+\item Kayıt işlemi tamamlanır.
+\end{enumerate}
+\item[Extensions (or Alternative Flows):] \hspace{10mm}
+\begin{itemize}
+\item[*a] Senaryodaki herhangi bir ölümcül hatada:
+    \begin{enumerate}
+    \item Bütün işlemler ipyal edilip her şey baştan yazılır.
+    \end{enumerate}
+\item[2a.] Aynı isimli başka bir otel varsa
+    \begin{enumerate}
+    \item Sistem yeni bir otel ismi girilmesini ister.
+    \item Eşsiz bir otel ismi girilene kadar 2a devam eder.
+    \item İşleme kalınan yerden devam edilir.
+    \end{enumerate}
+\item[2b.]
+    \begin{enumerate}
+    \item Sistem yeni bir adres girilesini ister.
+    \item Eşsiz bir adres girilene kadar 2a devam eder.
+    \item İşleme kalınan yerden devam edilir.
+    \end{enumerate}
+\end{itemize}
+\end{description}
+
+\newpage
+\begin{description}
+\item[Use Case 5:] Resepsiyonist Ekleme\\
+\item[Scope:] Otel Rezervasyon Sistemi
+\item[Level:] User Goal
+\item[Primary Actor:] Sistem Yöneticisi 
+\item[Stakeholders and Interests:] \hspace{10 mm}
+\begin{description} 
+\item[Sistem Yöneticisi:] Yeni bir resepsiyonistin sisteme kayıtlı olmasını bekler.
+\end{description}
+\item[Preconditions:] \hspace{10mm}
+\begin{itemize}
+\item Sistem yöneticisi sisteme kayıtlı ve giriş yapmış olmalı
+\end{itemize}
+
+\item[Postconditions:] \hspace{10mm}
+\begin{itemize}
+\item Resepsiyonist sisteme kaydedilmiş olmalı.
+\end{itemize}
+\item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
+\begin{enumerate}
+\item Sistem yöneticisi yeni bir resepsiyonist kaydı başlatır.
+\item Sistem resepsiyonist için gerekli bilgileri ister.
+\item Sistem yöneticisi gerekli bilgileri girer.
+\item Kayıt işlemi tamamlanır.
+\end{enumerate}
+\item[Extensions (or Alternative Flows):] \hspace{10mm}
+\begin{itemize}
+\item[*a] Senaryodaki herhangi bir ölümcül hatada:
+    \begin{enumerate}
+    \item Bütün işlemler ipyal edilip her şey baştan yazılır.
+    \end{enumerate}
+\item[2a] Aynı kullanıcı isimli başka bir resepsiyonist varsa
+    \begin{enumerate}
+    \item Sistem yeni bir kullanıcı adı girilmesini ister.
+    \item Eşsiz bir isim girilene kadar 2a devam eder.
+    \item İşlem kaldığı yerden devam eder.
+    \end{enumerate}
+\end{itemize}
+\end{description}
 
 \end{document}
