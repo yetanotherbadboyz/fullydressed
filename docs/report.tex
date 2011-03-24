@@ -131,6 +131,214 @@ Otel Aktivitesi Ekleme/Değiştirme/Çıkartma \\
 \end{tabular}
 
 \newpage
+{
+\bf
+Supplementary Specification: \\[1cm]
+}
+\begin{tabular}{ |p{2.5cm} | p{2cm} | p{7cm} | p{2.7cm} | }
+
+\hline
+\bf
+Version
+&
+\bf
+Date
+&
+\bf
+Description
+&
+\bf
+Author \\
+\hline
+
+Inception Phase
+&
+17.03.2011
+&
+Elaboration fazında yeniden düzenlenmek üzere hazırlanmış ilk taslak.
+&
+Mesutcan Kurt
+Orçun Avşar \\
+\hline
+
+&
+
+&
+
+&
+
+&
+
+\hline
+
+\end{tabular}
+
+\newpage
+
+{
+\bf
+Glossary:  \\[1cm]
+}
+\begin{tabular}{ |p{2.5cm} | p{6cm} | p{2.3cm} | p{3cm} | p{2cm} |}
+\hline
+\bf
+Term
+&
+\bf
+Definition and Information
+&
+\bf
+Format
+&
+\bf
+Validation Rules
+&
+\bf
+Aliases
+&
+\hline 
+%Term
+Müşteri
+&
+%Definition and Information
+Otel kiralama/rezarvasyon işlemini resepsiyonist ya da 
+turizm acentesi ile yapan, kiralanan oda ile kiralanan tarih
+boyunca ilişkilendirilen otel müşterisidir.
+&
+%Format
+&
+%Validation Rules
+&
+%Aliases
+&
+
+\hline
+Resepsiyonist
+&
+Resepsiyonist, bir otel personelidir. Otel ile ilgili olan rezervasyonları yapar. Oda kiralama işlemini gerçekleştirebilir. Sistemin de bir kullanıcısıdır.
+&
+
+&
+
+&
+
+&
+
+\hline 
+%Term
+Otel
+&
+%Definition and Information
+Sistemin tüm işlemlerinin gerçekleştiği fiziksel mekandır.
+Otelin sahip olduğu yıldız sayısına göre bazı özellikleri müşterilerine
+sunmak zorundadır.
+&
+%Format
+&
+%Validation Rules
+&
+%Aliases
+&
+
+\hline
+Rezervasyon
+&
+Rezervasyon işlemi, belirli bir güne kadar, belirli bir gün için, belirli bir kişiye, belirli bir odayı ayırtma işlemidir.
+&
+
+&
+
+&
+
+&
+
+\hline
+
+Kiralama
+
+&
+
+Herhangi bir rezervasyon işlemini, ücret karşılığında gerçekleştirme işlemidir. Ya da herhangi bir durumda bir odanın o kişiye bir süreliğine verilme işlemidir.
+
+&
+
+&
+
+&
+
+&
+
+\hline
+
+\end{tabular}
+
+\newpage
+{
+\bf
+Business Rule: \\[1cm]
+}
+\begin{tabular}{ |p{2cm} | p{6cm} | p{4cm} | p{3cm} |}
+\hline
+\bf ID
+&
+\bf Rule
+&
+\bf Changeability
+&
+\bf Source
+&
+\hline
+RULE1
+&
+Vergi kuralı. Satışlara vergi miktarı eklenmeli.
+&
+Vergiler devlet tarafından çıkartılan yasalara göre belirlenir.
+Vergilerin değişmesi yasaların değişmesine bağlıdır. Bu süreç değişiklik
+gösterebilir. Vergiler sistem yöneticisi tarafından daha sonra 
+değiştirilebilmelidir.
+&
+Hükümet
+&
+\hline
+RULE2
+&
+Yaş kuralı. 18 yaşından küçükler yanlarında ebeveynleri olmadan oda
+hizmetlerinden faydalanamazlar.
+&
+Yaş kuralı yasalar tarafından belirlenir. 18 yaş sınırının değişkenliği
+fazla değildir. Bu kural sabit kabul edilebilir.
+&
+Hükümet
+&
+\hline
+RULE3
+&
+Kimlik kanıtlama kuralı. Otele giriş ve çıkış yapan müşterilerin
+logları tutulmalı ve bu loglar belirli sürelerin sonunda emniyete
+bildirilmelidir. 
+&
+Kimlik kanıtlama kuralı emniyete bildirme zorunluluğu olmasa dahi
+daha sonra otelin bazı durumlarda sorumluluk üstlenmemesi için önemlidir.
+Kanuni durumlarda otelde kimin kaldığı belgelenmiş olur.
+&
+Güvenlik
+&
+\hline
+RULE4
+&
+Yıldız kuralı. Otelin sahip olduğu yıldıza göre bulundurduğu özellikleri
+değişmelidir. Bir otel sahip olduğu yıldızın gereksinimlerini yerine 
+getirmelidir.
+&
+Yıldızların gereksinimleri Kültür ve Turizm bakanlığı tarafından belirlenir.
+Fazla değişken değillerdir. Sisteme kodlanarak belirtilebilirler.
+&
+Kültür ve Turizm Bakanlığı
+&
+\hline
+\end{tabular}
+
+\newpage
 
 \begin{description}
 \item[Use Case 1:] Müşteri Ekleme \\
@@ -387,214 +595,6 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{description}
 
 \includegraphics{dia/allusecasessmall.png}
-
-\newpage
-{
-\bf
-Supplementary Specification: \\[1cm]
-}
-\begin{tabular}{ |p{2.5cm} | p{2cm} | p{7cm} | p{2.7cm} | }
-
-\hline
-\bf
-Version
-&
-\bf
-Date
-&
-\bf
-Description
-&
-\bf
-Author \\
-\hline
-
-Inception Phase
-&
-17.03.2011
-&
-Elaboration fazında yeniden düzenlenmek üzere hazırlanmış ilk taslak.
-&
-Mesutcan Kurt
-Orçun Avşar \\
-\hline
-
-&
-
-&
-
-&
-
-&
-
-\hline
-
-\end{tabular}
-
-\newpage
-
-{
-\bf
-Glossary:  \\[1cm]
-}
-\begin{tabular}{ |p{2.5cm} | p{6cm} | p{2.3cm} | p{3cm} | p{2cm} |}
-\hline
-\bf
-Term
-&
-\bf
-Definition and Information
-&
-\bf
-Format
-&
-\bf
-Validation Rules
-&
-\bf
-Aliases
-&
-\hline 
-%Term
-Müşteri
-&
-%Definition and Information
-Otel kiralama/rezarvasyon işlemini resepsiyonist ya da 
-turizm acentesi ile yapan, kiralanan oda ile kiralanan tarih
-boyunca ilişkilendirilen otel müşterisidir.
-&
-%Format
-&
-%Validation Rules
-&
-%Aliases
-&
-
-\hline
-Resepsiyonist
-&
-Resepsiyonist, bir otel personelidir. Otel ile ilgili olan rezervasyonları yapar. Oda kiralama işlemini gerçekleştirebilir. Sistemin de bir kullanıcısıdır.
-&
-
-&
-
-&
-
-&
-
-\hline 
-%Term
-Otel
-&
-%Definition and Information
-Sistemin tüm işlemlerinin gerçekleştiği fiziksel mekandır.
-Otelin sahip olduğu yıldız sayısına göre bazı özellikleri müşterilerine
-sunmak zorundadır.
-&
-%Format
-&
-%Validation Rules
-&
-%Aliases
-&
-
-\hline
-Rezervasyon
-&
-Rezervasyon işlemi, belirli bir güne kadar, belirli bir gün için, belirli bir kişiye, belirli bir odayı ayırtma işlemidir.
-&
-
-&
-
-&
-
-&
-
-\hline
-
-Kiralama
-
-&
-
-Herhangi bir rezervasyon işlemini, ücret karşılığında gerçekleştirme işlemidir. Ya da herhangi bir durumda bir odanın o kişiye bir süreliğine verilme işlemidir.
-
-&
-
-&
-
-&
-
-&
-
-\hline
-
-\end{tabular}
-
-\newpage
-{
-\bf
-Business Rule: \\[1cm]
-}
-\begin{tabular}{ |p{2cm} | p{6cm} | p{4cm} | p{3cm} |}
-\hline
-\bf ID
-&
-\bf Rule
-&
-\bf Changeability
-&
-\bf Source
-&
-\hline
-RULE1
-&
-Vergi kuralı. Satışlara vergi miktarı eklenmeli.
-&
-Vergiler devlet tarafından çıkartılan yasalara göre belirlenir.
-Vergilerin değişmesi yasaların değişmesine bağlıdır. Bu süreç değişiklik
-gösterebilir. Vergiler sistem yöneticisi tarafından daha sonra 
-değiştirilebilmelidir.
-&
-Hükümet
-&
-\hline
-RULE2
-&
-Yaş kuralı. 18 yaşından küçükler yanlarında ebeveynleri olmadan oda
-hizmetlerinden faydalanamazlar.
-&
-Yaş kuralı yasalar tarafından belirlenir. 18 yaş sınırının değişkenliği
-fazla değildir. Bu kural sabit kabul edilebilir.
-&
-Hükümet
-&
-\hline
-RULE3
-&
-Kimlik kanıtlama kuralı. Otele giriş ve çıkış yapan müşterilerin
-logları tutulmalı ve bu loglar belirli sürelerin sonunda emniyete
-bildirilmelidir. 
-&
-Kimlik kanıtlama kuralı emniyete bildirme zorunluluğu olmasa dahi
-daha sonra otelin bazı durumlarda sorumluluk üstlenmemesi için önemlidir.
-Kanuni durumlarda otelde kimin kaldığı belgelenmiş olur.
-&
-Güvenlik
-&
-\hline
-RULE4
-&
-Yıldız kuralı. Otelin sahip olduğu yıldıza göre bulundurduğu özellikleri
-değişmelidir. Bir otel sahip olduğu yıldızın gereksinimlerini yerine 
-getirmelidir.
-&
-Yıldızların gereksinimleri Kültür ve Turizm bakanlığı tarafından belirlenir.
-Fazla değişken değillerdir. Sisteme kodlanarak belirtilebilirler.
-&
-Kültür ve Turizm Bakanlığı
-&
-\hline
-\end{tabular}
 
 
 \end{document}
