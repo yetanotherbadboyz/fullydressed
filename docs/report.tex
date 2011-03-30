@@ -447,12 +447,22 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
     \begin{enumerate}
     \item Oda kayıt işlemi iptal edilir.
     \end{enumerate}
-
-\item[4a] Müşteriye uygun oda yoksa:
+\item[6a] Müşteriye uygun oda yoksa:
     \begin{enumerate} 
+    \item Müşteri bilgilendirilir.
     \item Kayıt işlemi tamamlanmadan iptal edilir.
     \end{enumerate}
-\item[6a] Ödeme yapılmazsa
+\item[7a] Müşteri sunulan odalardan hiç birini beğenmezse.
+    \begin{enumerate}
+    \item İşlem tamamlanmadan iptal edilir
+    \end{enumerate}
+\item[9a] Müşterinin çıkış tarihinden önce oda rezarvasyon edilmişse
+    \begin{enumerate}
+    \item Sistem resepsiyoniste rezarvasyon yapılan tarihi gösterir
+    \item Resepsiyonist müşteriyi bilgilendirir
+    \item 6. adıma geri dönülür
+    \end{enumerate}
+\item[12a] Ödeme yapılmazsa
     \begin{enumerate}
     \item İşlem iptal edilir.
     \end{enumerate}
@@ -476,7 +486,8 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \item[Preconditions:] \hspace{10mm}
 \begin{itemize}
 \item Otel sistemde kayıtlı olmalı.
-\item Sistem yöneticisi sisteme kayıtlı ve giriş yapmış olmalı
+\item Sistem yöneticisi sisteme kayıtlı ve giriş yapmış olmalı.
+\item Oda katologu sisteme kayıtlı olmalı.
 \end{itemize}
 
 \item[Postconditions:] \hspace{10mm}
@@ -486,6 +497,9 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
 \begin{enumerate}
 \item Sistem yöneticisi oda eklemek için yeni bir işlem başlatır.
+\item Sistem uygun oda kataloglarını reseposyoniste listeler
+\item Resepsiyonist ugun kataloğu seçer
+\item Sistem odanın diğer özelliklerinin girilmesi için gerekli ekranı sunar
 \item Odanın numarasını ve diğer özelliklerini sisteme girer.
 \item İşlem tamamlanır.
 \end{enumerate}
@@ -495,10 +509,10 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
     \begin{enumerate}
     \item Bütün işlemler ipyal edilip her şey baştan yazılır.
     \end{enumerate}
-\item[2a] Aynı numaralı başka bir oda varsa:
+\item[5a] Aynı numaralı başka bir oda varsa:
     \begin{enumerate}
     \item Sistem yöneticiden başka bir oda numarası ister.
-    \item Eşsiz bir oda numarası girilinceye kadar 2a tekrarlanır.
+    \item Eşsiz bir oda numarası girilinceye kadar 5a tekrarlanır.
     \item İşlem kaldığı yerden devam eder.
     \end{enumerate}
 \end{itemize}
