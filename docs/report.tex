@@ -357,7 +357,6 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \item Otel sistemde kayıtlı olmalı.
 \item Resepsiyonist sistemde kayıtlı ve yetkiye sahip olmalı.
 \item Resepsiyonist sisteme giriş yapmış olmalı.
-\item Aynı ID'li başka bir müşteri eklenmemiş olmalı.
 \end{itemize}
 
 \item[Postconditions:] \hspace{10mm}
@@ -367,10 +366,13 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
 \begin{enumerate}
 \item Müşteri otele gelir ve resepsiyoniste talebini iletir.
-\item Resepsiyonist yeni bir kayıt işlemi başlatır.
+\item Resepsiyonist sisteme yeni bir kayıt işlemi isteği gönderir.
+\item Sistem, resepsiyoniste yeni bir kayıt formu sunar.
 \item Resepsiyonist müşteriden gerekli olan bilgileri temin eder.
 \item Resepsiyonist verilen bilgilerin kanıtlanmasını talep eder.
 \item Resepsiyonist bilgileri sisteme girer ve kayıt işlemini sisteme iletir.
+\item Sistem, girilen müşteri için varsayılan müşteri tipini atar.
+\item Sistem girilen kayıt işlemini onaylar.
 \end{enumerate}
 \item[Extensions (or Alternative Flows):] \hspace{10mm}
 \begin{itemize}
@@ -378,9 +380,14 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
     \begin{enumerate}
     \item Bütün işlemler ipyal edilip her şey baştan yazılır.
     \end{enumerate}
-\item[4a.] Müşteri kimliğini kanıtlayamaz ise
+\item[5a.] Müşteri kimliğini kanıtlayamaz ise
     \begin{enumerate} 
     \item Kayıt işlemi tamamlanmadan iptal edilir.
+    \end{enumerate}
+
+\item[6a.] Aynı TC Kimlik No'lu başka bir müşteri eklenmiş ise
+    \begin{enumerate}
+    \item Müşterinin zaten sisteme kayıtlı olduğu söylenir ve işlem iptal edilir.
     \end{enumerate}
 \end{itemize}
 
@@ -417,10 +424,18 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \item[Main Success Scenario (or Basic Flow):] \hspace{10mm}
 \begin{enumerate}
 \item Müşteri otele gelir ve resepsiyoniste talebini iletir.
-\item Resepsiyonist yeni bir kayıt işlemi başlatır.
-\item Resepsiyonist müşteriden gerekli olan bilgileri temin eder.
-\item Resepsiyonist verilen bilgilerin kanıtlanmasını talep eder.
+\item Resepsiyonist müşteriden TC kimlik numarasını ister.
+\item Resepsiyonist müşteriden kimliğini kanıtlanmasını talep eder.
+\item Resepsiyonist TC kimlik numarasını yeni oda talebiyle birlikte sisteme girer.
+\item Sistem yapılacak işlemi müşteri ile ilişkilendirir.
+\item Sistem resepsiyoniste müşteriye uygun tipte boş odaları listeler.
+\item Resepsiyonist müşteriye uygun odaları özellikleriyle belirtir ve bir seçim yapmasını bekler
+\item Resepsiyonist seçilen odayı sisteme girer.
+\item Resepsiyonist müşteriden kalacağı tarihleri talep eder ve sisteme girer.
 \item Resepsiyonist bilgileri sisteme girer ve kayıt işlemini sisteme iletir.
+\item Sistem toplam tahsil edilmesi gereken parayı gösterir.
+\item Resepsiyonist parayı müşteriden tahsil eder ve sisteme iletir.
+\item Sistem işlemin başarı ile gerçekleştiğini bildirir.
 \end{enumerate}
 \item[Extensions (or Alternative Flows):] \hspace{10mm}
 \begin{itemize}
@@ -428,10 +443,11 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
     \begin{enumerate}
     \item Bütün işlemler ipyal edilip her şey baştan yazılır.
     \end{enumerate}
-\item[3a] Müşteri sisteme kayıtlı değilse:
+\item[3a] Müşteri kimliğini kanıtlayamaz ise 
     \begin{enumerate}
-    \item Yeni müşteri oluşturulup bu adımdan devam edilir.
+    \item Oda kayıt işlemi iptal edilir.
     \end{enumerate}
+
 \item[4a] Müşteriye uygun oda yoksa:
     \begin{enumerate} 
     \item Kayıt işlemi tamamlanmadan iptal edilir.
