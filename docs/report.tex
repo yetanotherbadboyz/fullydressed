@@ -321,7 +321,7 @@ Kimlik kanıtlama kuralı emniyete bildirme zorunluluğu olmasa dahi
 daha sonra otelin bazı durumlarda sorumluluk üstlenmemesi için önemlidir.
 Kanuni durumlarda otelde kimin kaldığı belgelenmiş olur.
 &
-Güvenlik
+
 &
 \hline
 RULE4
@@ -403,6 +403,51 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{center}
 
 \newpage
+
+\begin{description}
+\item[Contract 1:] Müşteri Kaydı İşlemini Başlat 
+\item[Operation:] musteriKaydiIsleminiBaslat()
+\item[Cross References:] Use cases: Müşteri Ekleme
+\item[Preconditions:] Yok
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Bir müşteri nesnesi yaratılmış olmalı.
+\item Nesnenin özellikleri başlatılmış olmalı.
+\item Müşteri kayıt formu geri dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 2:] Kayıt Bilgilerini Gönder 
+\item[Operation:] kayitBilgileriniGonder()
+\item[Cross References:] Use cases: Müşteri Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Müşteri kaydı işlemi başlamış olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Onay geri dönmeli.
+\item Nesnenin özellikleri doldurulmuş ve kaydedilmiş olmalı. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 3:] Kayıt İşlemini Bitir 
+\item[Operation:] kayitIsleminiBitir()
+\item[Cross References:] Use cases: Müşteri Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Müşteri eklenmiş olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item İşlem bitirilmiş olmalı. \\
+\end{itemize}
+\end{description}
+
+\newpage
+
 \begin{description}
 \item[Use Case 2:] Oda Kiralama \\
 \item[Scope:] Otel Rezervasyon Sistemi
@@ -484,6 +529,82 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{center}
 
 \newpage
+
+
+\begin{description}
+\item[Contract 1:] Oda Kiralama İşlemini Başlat
+\item[Operation:] odaKiralamaIsleminiBaslat(TCKimlikNo)
+\item[Cross References:] Use cases: Oda Kiralama
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Müşteri sistemde kayıtlı olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Müşteriye göre uygun oda listesi geri dönmeli.
+\item Oda kiralama işlemi başlatılmış olmalı. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 2:] Uygun oda seçme
+\item[Operation:] uygunOdaSec(odaID)
+\item[Cross References:] Use cases: Oda Kiralama
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Seçilen oda boş ve ilgili müşteri için mümkün olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Tarih seçme formu geri dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 3:] Kiralama Tarihi Seç
+\item[Operation:] kiralamaTarihiSec(girisTarihi, cikisTarihi)
+\item[Cross References:] Use cases: Oda Kiralama
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Kiralanacak oda, işlem oturumunda tutuluyor olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Tahsil edilecek miktar geri dönmeli.
+\item Oda müşteri için bloke edilmiş olmalı. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 4:] Tahsil Onay
+\item[Operation:] tahsilOnay()
+\item[Cross References:] Use cases: Oda Kiralama
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Resepsiyonist oda için gerekli parayı tahsil etmiş olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Odanın blokesi kaldırılıp müşteri için odanın kiralanmış olması. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 5:] Kiralama İşlemini Bitir
+\item[Operation:] kiralamaIsleminiBitir()
+\item[Cross References:] Use cases: Oda Kiralama
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Oda kiralanmış olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Kiralama işlemi bitirilmiş olmalı. \\
+\end{itemize}
+\end{description}
+
+\newpage
+
 \begin{description}
 \item[Use Case 3:] Oda Ekleme \\
 \item[Scope:] Otel Rezervasyon Sistemi
@@ -538,6 +659,66 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{center}
 
 \newpage
+
+
+\begin{description}
+\item[Contract 1:] Oda Ekleme İşlemini Başlat
+\item[Operation:] odaEklemeIsleminiBaslat(otelID)
+\item[Cross References:] Use cases: Oda Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Otel sistemde kayıtlı olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Uygun oda katalogları geri dönmeli.
+\item Oda ekleme işlemi başlatılmış olmalı. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 2:] Katalog Seç
+\item[Operation:] katalogSec(katalogID)
+\item[Cross References:] Use cases: Oda Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Oda ekleme işlemi başlatılmış olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Oda kataloğu kayıt işleminde doldurulmalı.
+\item Oda özellik formu geri dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 3:] Oda Özellikleri Belirt
+\item[Operation:] odaOzellikleriBelirt(odano,...)
+\item[Cross References:] Use cases: Oda Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Katalog seçilmiş olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Oda özellikleri kaydedilmiş olmalı.
+\item Onay geri dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 4:] Kayıt İşlemini Sonlandır
+\item[Operation:] kayitIsleminiSonlandır()
+\item[Cross References:] Use cases: Oda Ekleme
+\item[Preconditions:] Yok
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Kayıt işlemi sonlandırılmış olmalı. \\
+\end{itemize}
+\end{description}
+
+\newpage
+
 \begin{description}
 \item[Use Case 4:] Otel Ekleme \\
 \item[Scope:] Otel Rezervasyon Sistemi
@@ -595,6 +776,46 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{center}
 
 \newpage
+
+\begin{description}
+\item[Contract 1:] Otel Ekleme İşlemini Başlat
+\item[Operation:] otelEklemeIsleminiBaslat()
+\item[Cross References:] Use cases: Otel Ekleme
+\item[Preconditions:] Yok
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item İşlem başlatılmış olmalı.
+\item Otel ekleme formu geri dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 2:] Otel Bilgilerini Gir
+\item[Operation:] otelBilgileriniGir(ozellikler)
+\item[Cross References:] Use cases: Otel Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item Kayıt işlemi başlamış olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Otel, özellikleriyle kaydedilmiş olmalı.
+\item otelID geri dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 3:] Kayıt İşlemini Sonlandır
+\item[Operation:] kayitIsleminiSonlandır()
+\item[Cross References:] Use cases: Otel Ekleme
+\item[Preconditions:] Yok
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Kayıt işlemi sonlandırılmış olmalı. \\
+\end{itemize}
+\end{description}
+
+\newpage
 \begin{description}
 \item[Use Case 5:] Resepsiyonist Ekleme\\
 \item[Scope:] Otel Rezervasyon Sistemi
@@ -646,6 +867,46 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
 \end{center}
 
 \newpage
+
+
+\begin{description}
+\item[Contract 1:] Resepsiyonist Ekleme İşlemini Başlat
+\item[Operation:] resepsiyonistEklemeIsleminiBaslat()
+\item[Cross References:] Use cases: Resepsiyonist Ekleme
+\item[Preconditions:] Yok
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Resepsiyonist ekleme işlemi başlatılmış olmalı.
+\item Geriye resepsiyonist formu dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 2:] Resepsiyonist Bilgilerini Gir
+\item[Operation:] resepisyonistBilgileriniGir(ozellikler)
+\item[Cross References:] Use cases: Resepsiyonist Ekleme
+\item[Preconditions:] \hspace{10 mm}
+\begin{itemize}
+\item İşlem başlatılmış olmalı.
+\end{itemize}
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Resepsiyonist bilgileri ozellikleri ile birlikte kaydedilmiş olmalı.
+\item Geriye resepsiyonistID dönmeli. \\
+\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Contract 3:] Kayıt İşlemini Sonlandır
+\item[Operation:] kayitIsleminiSonlandır()
+\item[Cross References:] Use cases: Resepsiyonist Ekleme
+\item[Preconditions:] Yok
+\item[Post Conditions:] \hspace{10 mm}
+\begin{itemize} 
+\item Kayıt işlemi sonlandırılmış olmalı. \\
+\end{itemize}
+\newpage
+
 \begin{description}
 \item[Genel Domain UML Diagramı: ] \hfill
 
