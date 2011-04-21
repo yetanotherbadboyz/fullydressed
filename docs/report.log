@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (Web2C 2009) (format=pdflatex 2010.12.12)  7 APR 2011 02:23
+This is pdfTeX, Version 3.1415926-1.40.10 (Web2C 2009) (format=pdflatex 2010.12.12)  14 APR 2011 12:10
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -171,398 +171,509 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 81.
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+ [3] <dia/userroles.png, id=17, 442.65375pt x 518.93875pt>
+File: dia/userroles.png Graphic file (type png)
+
+<use dia/userroles.png>
+Overfull \hbox (7.30957pt too wide) in paragraph at lines 135--136
+[][] 
+ []
+
+[4 <./dia/userroles.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 []\OT1/cmr/m/n/12 Inception
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.170 &
+l.174 &
        
 ? 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 []\OT1/cmr/bx/n/12 Validation
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.198 &
+l.202 &
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--207
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 []\OT1/cmr/m/n/12 Otel ki-ra-lama/rezarvasyon
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.213 &
+l.217 &
        
 ? 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.225 &
+l.229 &
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 []\OT1/cmr/m/n/12 Sistemin t^^?um i^^Xslemlerinin
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 232--235
+Underfull \hbox (badness 6252) in paragraph at lines 236--239
 \OT1/cmr/m/n/12 ger^^Xcekle^^Xsti^^Ugi fi-zik-sel me-kand^^Pr.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 \OT1/cmr/m/n/12 Ote-lin sa-hip oldu^^Ugu y^^Pld^^Pz
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 \OT1/cmr/m/n/12 say^^Ps^^Pna g^^?ore baz^^P ^^?ozel-lik-leri
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 \OT1/cmr/m/n/12 m^^?u^^Xsterilerine sun-mak zo-run-
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.241 &
+l.245 &
        
 ? 
 
-Underfull \hbox (badness 3364) in paragraph at lines 246--247
+Underfull \hbox (badness 3364) in paragraph at lines 250--251
 []\OT1/cmr/m/n/12 Rezervasyon i^^Xslemi, be-lirli bir
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.253 &
+l.257 &
        
 ? 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.269 &
+l.273 &
        
 ? 
 
-Overfull \hbox (56.5857pt too wide) in paragraph at lines 180--274
+Overfull \hbox (56.5857pt too wide) in paragraph at lines 184--278
 [] 
  []
 
-[5]
+[6]
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.289 &
+l.293 &
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 []\OT1/cmr/m/n/12 Vergiler dev-let ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 raf^^Pndan ^^Xc^^Pkart^^Plan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 ya-sa-lara g^^?ore be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 lir-le-nir. Ver-gi-le-rin
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 de^^Ugi^^Xsmesi ya-sa-lar^^Pn
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 295--299
+Underfull \hbox (badness 5119) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 de^^Ugi^^Xsmesine ba^^Ugl^^Pd^^Pr.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 Bu s^^?ure^^Xc de^^Ugi^^Xsiklik
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 g^^?oste-re-bi-lir. Ver-gi-ler
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 295--299
+Underfull \hbox (badness 2495) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 sis-tem y^^?one-ti-cisi ta-
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 295--299
+Underfull \hbox (badness 2173) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 raf^^Pndan daha sonra
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.301 &
+l.305 &
        
 ? 
 
-Underfull \hbox (badness 6016) in paragraph at lines 305--307
+Underfull \hbox (badness 6016) in paragraph at lines 309--311
 \OT1/cmr/m/n/12 oda hiz-met-le-rin-den fay-da-la-na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
 []\OT1/cmr/m/n/12 Ya^^Xs ku-ral^^P ya-sa-lar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
 \OT1/cmr/m/n/12 ta-raf^^Pndan be-lir-le-
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 308--310
+Underfull \hbox (badness 1484) in paragraph at lines 312--314
 \OT1/cmr/m/n/12 nir. 18 ya^^Xs s^^Pn^^Pr^^Pn^^Pn
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
 \OT1/cmr/m/n/12 de^^Ugi^^Xskenli^^Ugi fazla
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
 \OT1/cmr/m/n/12 de^^Ugildir. Bu ku-ral
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.312 &
+l.316 &
        
 ? 
 
-Underfull \hbox (badness 1102) in paragraph at lines 316--319
+Underfull \hbox (badness 1102) in paragraph at lines 320--323
 []\OT1/cmr/m/n/12 Kimlik kan^^Ptlama ku-ral^^P. Otele
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--323
+Underfull \hbox (badness 10000) in paragraph at lines 324--327
 \OT1/cmr/m/n/12 zo-run-lulu^^Ugu ol-masa
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 320--323
+Underfull \hbox (badness 2856) in paragraph at lines 324--327
 \OT1/cmr/m/n/12 lin baz^^P du-rum-larda
  []
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 320--323
+Underfull \hbox (badness 3838) in paragraph at lines 324--327
 \OT1/cmr/m/n/12 mesi i^^Xcin ^^?onem-li-dir.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--323
+Underfull \hbox (badness 10000) in paragraph at lines 324--327
 \OT1/cmr/m/n/12 Ka-nuni du-rum-larda
  []
 
 
-Underfull \hbox (badness 3343) in paragraph at lines 320--323
+Underfull \hbox (badness 3343) in paragraph at lines 324--327
 \OT1/cmr/m/n/12 otelde ki-min kald^^P^^Ug^^P
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.325 &
+l.329 &
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 []\OT1/cmr/m/n/12 Y^^Pld^^Pzlar^^Pn ge-rek-si-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \OT1/cmr/m/n/12 nim-leri K^^?ult^^?ur ve
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \OT1/cmr/m/n/12 Tu-rizm ba-kanl^^P^^Ug^^P
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \OT1/cmr/m/n/12 ta-raf^^Pndan be-lir-le-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \OT1/cmr/m/n/12 nir. Fazla de^^Ugi^^Xsken
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \OT1/cmr/m/n/12 de^^Ugillerdir. Sis-teme
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 336--337
+Underfull \hbox (badness 4441) in paragraph at lines 340--341
 []\OT1/cmr/m/n/12 K^^?ult^^?ur ve Tu-
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.337 &
+l.341 &
        
 ? 
 
-Overfull \hbox (21.82341pt too wide) in paragraph at lines 278--340
+Overfull \hbox (21.82341pt too wide) in paragraph at lines 282--344
 [] 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-<dia/usecase1.png, id=26, 351.3125pt x 239.89626pt>
+<dia/usecase1.png, id=31, 351.3125pt x 239.89626pt>
 File: dia/usecase1.png Graphic file (type png)
  <use dia/usecase1.png>
-[7] [8 <./dia/usecase1.png (PNG copy)>]
-<dia/ssd-usecase1.png, id=34, 457.71pt x 481.8pt>
+[8] [9 <./dia/usecase1.png (PNG copy)>]
+<dia/ssd-usecase1.png, id=38, 457.71pt x 481.8pt>
 File: dia/ssd-usecase1.png Graphic file (type png)
  <use dia/ssd-usecase1.png>
-Overfull \hbox (4.741pt too wide) in paragraph at lines 402--403
+Overfull \hbox (4.741pt too wide) in paragraph at lines 406--407
  [] 
  []
 
-[9 <./dia/ssd-usecase1.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+[10 <./dia/ssd-usecase1.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
-[10] <dia/usecase2.png, id=41, 475.7775pt x 330.23375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
+
+ []
+
+[12] <dia/usecase2.png, id=48, 475.7775pt x 330.23375pt>
 File: dia/usecase2.png Graphic file (type png)
 
 <use dia/usecase2.png>
-Overfull \hbox (22.80843pt too wide) in paragraph at lines 479--480
+Overfull \hbox (22.80843pt too wide) in paragraph at lines 528--529
  [] 
  []
 
-<dia/ssd-usecase2.png, id=42, 457.71pt x 705.63625pt>
+<dia/ssd-usecase2.png, id=49, 457.71pt x 705.63625pt>
 File: dia/ssd-usecase2.png Graphic file (type png)
 
 <use dia/ssd-usecase2.png>
-Overfull \hbox (4.741pt too wide) in paragraph at lines 483--484
+Overfull \hbox (4.741pt too wide) in paragraph at lines 532--533
  [] 
  []
 
-[11 <./dia/usecase2.png (PNG copy)>] [12]
+[13 <./dia/usecase2.png (PNG copy)>] [14]
 Overfull \vbox (35.12766pt too high) has occurred while \output is active []
 
 
-[13 <./dia/ssd-usecase2.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+[15 <./dia/ssd-usecase2.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 
  []
 
 
-Overfull \hbox (2.7007pt too wide) in paragraph at lines 494--495
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
+
+ []
+
+
+Overfull \hbox (2.7007pt too wide) in paragraph at lines 619--620
 []\OT1/cmr/m/n/12 Odan^^Pn tan^^Pmlanmas^^P ile il-gili her-hangi bir ek-sik-li
 k ol-ma-mas^^Pn^^P
  []
 
-<dia/usecase3.png, id=53, 355.3275pt x 309.155pt>
+<dia/usecase3.png, id=66, 355.3275pt x 309.155pt>
 File: dia/usecase3.png Graphic file (type png)
  <use dia/usecase3.png>
-[14] [15 <./dia/usecase3.png (PNG copy)>]
-<dia/ssd-usecase3.png, id=60, 467.7475pt x 598.235pt>
+[18] [19 <./dia/usecase3.png (PNG copy)>]
+<dia/ssd-usecase3.png, id=74, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase3.png Graphic file (type png)
 
 <use dia/ssd-usecase3.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 537--538
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 662--663
  [] 
  []
 
-[16 <./dia/ssd-usecase3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+[20 <./dia/ssd-usecase3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 679--680
 
  []
 
-<dia/usecase4.png, id=64, 260.975pt x 212.795pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 694--695
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
+
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 727--728
+
+ []
+
+<dia/usecase4.png, id=84, 260.975pt x 212.795pt>
 File: dia/usecase4.png Graphic file (type png)
  <use dia/usecase4.png>
-[17] [18 <./dia/usecase4.png (PNG copy)>]
-<dia/ssd-usecase4.png, id=71, 467.7475pt x 598.235pt>
+[23] [24 <./dia/usecase4.png (PNG copy)>]
+<dia/ssd-usecase4.png, id=91, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase4.png Graphic file (type png)
 
 <use dia/ssd-usecase4.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 594--595
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 779--780
  [] 
  []
 
-[19 <./dia/ssd-usecase4.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+[25 <./dia/ssd-usecase4.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
-<dia/usecase5.png, id=76, 260.975pt x 305.14pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 818--819
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 824--825
+
+ []
+
+<dia/usecase5.png, id=99, 260.975pt x 305.14pt>
 File: dia/usecase5.png Graphic file (type png)
- <use dia/usecase5.png> [20]
-[21 <./dia/usecase5.png (PNG copy)>]
-<dia/ssd-usecase5.png, id=83, 467.7475pt x 598.235pt>
+ <use dia/usecase5.png> [27]
+[28 <./dia/usecase5.png (PNG copy)>]
+<dia/ssd-usecase5.png, id=106, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase5.png Graphic file (type png)
 
 <use dia/ssd-usecase5.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 645--646
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 870--871
  [] 
  []
 
-[22 <./dia/ssd-usecase5.png (PNG copy)>]
-<dia/allusecasessmall.png, id=87, 276.28218pt x 595.47469pt>
+[29 <./dia/ssd-usecase5.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 884--885
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--911
+
+ []
+
+[30] <dia/allusecasessmall.png, id=113, 276.28218pt x 595.47469pt>
 File: dia/allusecasessmall.png Graphic file (type png)
 
-<use dia/allusecasessmall.png> [23 <./dia/allusecasessmall.png (PNG copy)>]
-(./report.aux (./header.aux)) ) 
+<use dia/allusecasessmall.png>
+
+! LaTeX Error: \begin{description} on input line 903 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.922 \end{document}
+                    
+? 
+[31 <./dia/allusecasessmall.png (PNG copy)>] (./report.aux (./header.aux)) )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 903 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2749 strings out of 493848
- 33934 string characters out of 3154066
+ 2754 strings out of 493848
+ 34034 string characters out of 3154066
  89284 words of memory out of 3000000
- 6012 multiletter control sequences out of 15000+200000
+ 6016 multiletter control sequences out of 15000+200000
  7337 words of font info for 26 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  25i,12n,24p,378b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (23 pages, 340494 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (31 pages, 372061 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
