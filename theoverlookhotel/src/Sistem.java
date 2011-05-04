@@ -26,9 +26,16 @@ public class Sistem {
 
 	}
 	
+	public List<OdaKatalogu> kataloglariGetir(){
+		return this.aktifOtel.kataloglariGetir();
+	}
+	
+	public void katalogSec(OdaKatalogu katalog,Oda oda){
+		this.aktifOtel.katalogSec(katalog,oda);
+	}
+	
 	public void uygunOdaSec(int odaID) {
 		aktifOtel.uygunOdaSec(odaID, kiralama);
-
 	}
 	
 	public float kiralamaTarihiSec(int girisGun, int girisAy, int girisYil,
@@ -50,10 +57,6 @@ public class Sistem {
 		return aktifOtel.odaYarat();
 	}
 	
-	public void katalogSec(Oda o, int _katalogID) {
-		o.katalogSec(_katalogID);
-
-	}
 	
 	public void odaOzellikleriBelirt(Oda o, int odaNo) {
 		o.odaOzellikleriBelirt(odaNo);

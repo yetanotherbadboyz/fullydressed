@@ -49,8 +49,8 @@ public class Oda {
 		
 	}
 
-	public void katalogSec(int _katalogID) {
-		// TODO Auto-generated method stub
+	public void katalogSec(OdaKatalogu katalog) {
+		this.odaKatalogu = katalog;
 		
 	}
 
