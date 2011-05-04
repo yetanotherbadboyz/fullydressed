@@ -3,6 +3,7 @@ public class Oda {
 	private int odaID;
 	private boolean uygunluk;
 	private boolean bosOlma;
+	private OdaKatalogu odaKatalogu;
 	
 	public Oda(int _odaID) {
 		this.odaID = _odaID;
@@ -22,6 +23,13 @@ public class Oda {
 	}
 	public boolean isAvailable() {
 		return uygunluk;
+	}
+	
+	public boolean uygunMu(Musteri musteri) {
+		if (!this.isAvailable()){
+			return false;
+		}
+		return this.odaKatalogu.uygunMu(musteri);
 	}
 	public void uygunlukAyarla(boolean uygunluk) {
 		this.uygunluk = uygunluk;

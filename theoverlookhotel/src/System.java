@@ -17,7 +17,7 @@ public class System {
 	
 	public void odaKiralamaIsleminiBaslat(int musteriTcKimlikNo) {
 		Musteri musteri = aktifOtel.musteriGetir(musteriTcKimlikNo);
-		
+		List<Oda> uygunOdalar = aktifOtel.uygunOdalariGetir(musteri)
 
 	}
 	

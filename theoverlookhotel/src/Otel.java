@@ -123,10 +123,10 @@ public class Otel {
 		return null;
 	}
 	
-	public List<Oda> uygunOdalariGetir(){
+	public List<Oda> uygunOdalariGetir(Musteri musteri){
 		List<Oda> _innerList = new ArrayList<Oda>();
 		for (Oda i: odaListesi){
-			if (i.isAvailable())
+			if (i.uygunMu(musteri))
 				_innerList.add(i);
 		}
 		return _innerList;
