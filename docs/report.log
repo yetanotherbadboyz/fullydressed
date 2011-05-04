@@ -1,17 +1,19 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (Web2C 2009) (format=pdflatex 2010.12.12)  14 APR 2011 12:10
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  3 MAY 2011 23:13
 entering extended mode
  %&-line parsing enabled.
 **report.tex
 (./report.tex
 LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
-abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
-h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
-greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, ku
-rmanji, latin, latvian, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, po
-lish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, span
-ish, swedish, turkish, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, spani
+sh, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded.
 (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size12.clo
@@ -44,12 +46,12 @@ Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+File: pdftex.def 2011/01/28 v0.05d Graphics/color for pdfTeX
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
@@ -123,7 +125,25 @@ LaTeX Font Info:    ... okay on input line 8.
 \MPscratchDim=\dimen108
 \MPnumerator=\count95
 \everyMPtoPDFconversion=\toks21
-) (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
+) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+(/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
 \openout2 = `header.aux'.
@@ -140,8 +160,8 @@ File: uni-1.def 2004/10/17 UCS: Unicode data U+0100..U+01FF
 )) [1
 
 
-{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map} <./comu-head.png (PNG cop
-y)>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./comu-head.png (PNG copy)
+>]
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
@@ -171,7 +191,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 81.
- [3] <dia/userroles.png, id=17, 442.65375pt x 518.93875pt>
+ [3] <dia/userroles.png, id=18, 442.65375pt x 518.93875pt>
 File: dia/userroles.png Graphic file (type png)
 
 <use dia/userroles.png>
@@ -457,11 +477,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-<dia/usecase1.png, id=31, 351.3125pt x 239.89626pt>
+<dia/usecase1.png, id=32, 351.3125pt x 239.89626pt>
 File: dia/usecase1.png Graphic file (type png)
  <use dia/usecase1.png>
 [8] [9 <./dia/usecase1.png (PNG copy)>]
-<dia/ssd-usecase1.png, id=38, 457.71pt x 481.8pt>
+<dia/ssd-usecase1.png, id=39, 457.71pt x 481.8pt>
 File: dia/ssd-usecase1.png Graphic file (type png)
  <use dia/ssd-usecase1.png>
 Overfull \hbox (4.741pt too wide) in paragraph at lines 406--407
@@ -483,197 +503,231 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+[11] <dia/eventdiagram-usecase1.png, id=46, 114.4275pt x 516.42938pt>
+File: dia/eventdiagram-usecase1.png Graphic file (type png)
+
+<use dia/eventdiagram-usecase1.png> [12 <./dia/eventdiagram-usecase1.png (PNG c
+opy)>] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
-[12] <dia/usecase2.png, id=48, 475.7775pt x 330.23375pt>
+[14] [15] <dia/usecase2.png, id=60, 475.7775pt x 330.23375pt>
 File: dia/usecase2.png Graphic file (type png)
 
 <use dia/usecase2.png>
-Overfull \hbox (22.80843pt too wide) in paragraph at lines 528--529
+Overfull \hbox (22.80843pt too wide) in paragraph at lines 541--542
  [] 
  []
 
-<dia/ssd-usecase2.png, id=49, 457.71pt x 705.63625pt>
+[16 <./dia/usecase2.png (PNG copy)>]
+<dia/ssd-usecase2.png, id=64, 457.71pt x 705.63625pt>
 File: dia/ssd-usecase2.png Graphic file (type png)
 
 <use dia/ssd-usecase2.png>
-Overfull \hbox (4.741pt too wide) in paragraph at lines 532--533
+Overfull \hbox (4.741pt too wide) in paragraph at lines 547--548
  [] 
  []
 
-[13 <./dia/usecase2.png (PNG copy)>] [14]
+[17]
 Overfull \vbox (35.12766pt too high) has occurred while \output is active []
 
 
-[15 <./dia/ssd-usecase2.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
+[18 <./dia/ssd-usecase2.png (PNG copy)>]
+<dia/eventdiagram-usecase2.png, id=71, 512.66531pt x 706.13812pt>
+File: dia/eventdiagram-usecase2.png Graphic file (type png)
+
+<use dia/eventdiagram-usecase2.png>
+Overfull \hbox (59.69615pt too wide) in paragraph at lines 553--554
+ [] 
+ []
+
+[19]
+Overfull \vbox (35.62953pt too high) has occurred while \output is active []
+
+
+[20 <./dia/eventdiagram-usecase2.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--564
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
 
-Overfull \hbox (2.7007pt too wide) in paragraph at lines 619--620
+Overfull \hbox (2.7007pt too wide) in paragraph at lines 639--640
 []\OT1/cmr/m/n/12 Odan^^Pn tan^^Pmlanmas^^P ile il-gili her-hangi bir ek-sik-li
 k ol-ma-mas^^Pn^^P
  []
 
-<dia/usecase3.png, id=66, 355.3275pt x 309.155pt>
+<dia/usecase3.png, id=85, 355.3275pt x 309.155pt>
 File: dia/usecase3.png Graphic file (type png)
  <use dia/usecase3.png>
-[18] [19 <./dia/usecase3.png (PNG copy)>]
-<dia/ssd-usecase3.png, id=74, 467.7475pt x 598.235pt>
+[23] [24 <./dia/usecase3.png (PNG copy)>]
+<dia/ssd-usecase3.png, id=92, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase3.png Graphic file (type png)
 
 <use dia/ssd-usecase3.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 662--663
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 682--683
  [] 
  []
 
-[20 <./dia/ssd-usecase3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 679--680
+[25 <./dia/ssd-usecase3.png (PNG copy)>]
+<dia/eventdiagram-usecase3.png, id=97, 155.83218pt x 551.81157pt>
+File: dia/eventdiagram-usecase3.png Graphic file (type png)
+
+<use dia/eventdiagram-usecase3.png> [26 <./dia/eventdiagram-usecase3.png (PNG c
+opy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
+Underfull \hbox (badness 10000) in paragraph at lines 719--720
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--710
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 720--721
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 
  []
 
-[21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 727--728
+[27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
-<dia/usecase4.png, id=84, 260.975pt x 212.795pt>
+<dia/usecase4.png, id=107, 260.975pt x 212.795pt>
 File: dia/usecase4.png Graphic file (type png)
  <use dia/usecase4.png>
-[23] [24 <./dia/usecase4.png (PNG copy)>]
-<dia/ssd-usecase4.png, id=91, 467.7475pt x 598.235pt>
+[29] [30 <./dia/usecase4.png (PNG copy)>]
+<dia/ssd-usecase4.png, id=114, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase4.png Graphic file (type png)
 
 <use dia/ssd-usecase4.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 779--780
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 804--805
  [] 
  []
 
-[25 <./dia/ssd-usecase4.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 792--793
+[31 <./dia/ssd-usecase4.png (PNG copy)>]
+<dia/eventdiagram-usecase4.png, id=119, 109.1578pt x 374.90062pt>
+File: dia/eventdiagram-usecase4.png Graphic file (type png)
+
+<use dia/eventdiagram-usecase4.png> [32 <./dia/eventdiagram-usecase4.png (PNG c
+opy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 823--824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--819
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
 
  []
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 824--825
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
 
  []
 
-<dia/usecase5.png, id=99, 260.975pt x 305.14pt>
+<dia/usecase5.png, id=126, 260.975pt x 305.14pt>
 File: dia/usecase5.png Graphic file (type png)
- <use dia/usecase5.png> [27]
-[28 <./dia/usecase5.png (PNG copy)>]
-<dia/ssd-usecase5.png, id=106, 467.7475pt x 598.235pt>
+ <use dia/usecase5.png>
+[34] [35 <./dia/usecase5.png (PNG copy)>]
+<dia/ssd-usecase5.png, id=133, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase5.png Graphic file (type png)
 
 <use dia/ssd-usecase5.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 870--871
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 901--902
  [] 
  []
 
-[29 <./dia/ssd-usecase5.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 884--885
+[36 <./dia/ssd-usecase5.png (PNG copy)>]
+<dia/eventdiagram-usecase5.png, id=137, 111.41624pt x 614.295pt>
+File: dia/eventdiagram-usecase5.png Graphic file (type png)
+
+<use dia/eventdiagram-usecase5.png> [37 <./dia/eventdiagram-usecase5.png (PNG c
+opy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 920--921
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--900
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 910--911
+Underfull \hbox (badness 10000) in paragraph at lines 946--947
 
  []
 
-[30] <dia/allusecasessmall.png, id=113, 276.28218pt x 595.47469pt>
+[38] <dia/allusecasessmall.png, id=145, 276.28218pt x 595.47469pt>
 File: dia/allusecasessmall.png Graphic file (type png)
 
 <use dia/allusecasessmall.png>
 
-! LaTeX Error: \begin{description} on input line 903 ended by \end{document}.
+! LaTeX Error: \begin{description} on input line 939 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.922 \end{document}
+l.958 \end{document}
                     
 ? 
-[31 <./dia/allusecasessmall.png (PNG copy)>] (./report.aux (./header.aux)) )
+[39 <./dia/allusecasessmall.png (PNG copy)>] (./report.aux (./header.aux)) )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 903 (\begingroup)
+### semi simple group (level 1) entered at line 939 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2754 strings out of 493848
- 34034 string characters out of 3154066
- 89284 words of memory out of 3000000
- 6016 multiletter control sequences out of 15000+200000
+ 2986 strings out of 493760
+ 38114 string characters out of 3150207
+ 92870 words of memory out of 3000000
+ 6253 multiletter control sequences out of 15000+200000
  7337 words of font info for 26 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 715 hyphenation exceptions out of 8191
  25i,12n,24p,378b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (31 pages, 372061 bytes).
+Output written on report.pdf (39 pages, 478502 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
