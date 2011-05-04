@@ -5,13 +5,15 @@ public class Musteri {
 	private int tcKimlikNo;
 	private short yas;
 	private boolean uygunluk;
+	private MusteriTipi musteriTipi;
 	
-	public Musteri(String _adi, String _soyadi, int _tcKimlikNo, short _yas) {
+	public Musteri(String _adi, String _soyadi, int _tcKimlikNo, short _yas, MusteriTipi musteriTipi) {
 		this.adi = _adi;
 		this.soyadi = _soyadi;
 		this.tcKimlikNo = _tcKimlikNo;
 		this.yas = _yas;
 		this.uygunluk = true;
+		this.musteriTipi = musteriTipi;
 	}
 	
 	public Musteri() {
@@ -50,7 +52,11 @@ public class Musteri {
 	public void yasAyarla(short yas) {
 		this.yas = yas;
 	}
-
+	
+	public MusteriTipi musteriTipiGetir(){
+		return (this.musteriTipi);
+	}
+	
 	public void bilgileriKaydet(String musteriAdi, String musteriSoyadi,
 			int musteriTcKimlikNo, short yas) {
 		adAyarla(musteriAdi);
