@@ -8,6 +8,7 @@ public class Otel {
 	private List<Oda> odaListesi;
 	private List<Resepsiyonist> resepsiyonistListesi;
 	private List<Musteri> musteriListesi;
+	private List<OdaKatalogu>  katalogListesi;
 	private boolean uygunluk;
 	private int otelID;
 	
@@ -63,6 +64,7 @@ public class Otel {
 		odaListesi = new ArrayList<Oda>();
 		resepsiyonistListesi = new ArrayList<Resepsiyonist>();
 		musteriListesi = new ArrayList<Musteri>();
+		katalogListesi = new ArrayList<OdaKatalogu>();
 		
 	}
 	
@@ -94,6 +96,10 @@ public class Otel {
 				_innerList.add(i);			
 		}
 		return _innerList;
+	}
+	
+	public void katalogEkle(OdaKatalogu katalog){
+		katalogListesi.add(katalog);
 	}
 	
 	public int odaEkle(){
@@ -202,5 +208,13 @@ public class Otel {
 	public void kiralamaSonlandir(Kiralama kiralama) {
 		this.kiralamaSonlandir(kiralama);
 		
+	}
+
+	public List<OdaKatalogu> kataloglariGetir() {
+		return this.katalogListesi;
+	}
+	
+	public void katalogSec(OdaKatalogu katalog, Oda oda) {
+		oda.katalogSec(katalog);
 	}
 }
