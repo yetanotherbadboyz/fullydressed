@@ -209,7 +209,7 @@ public class Otel {
 		this.kiralamaSonlandir(kiralama);
 		
 	}
-
+	
 	public List<OdaKatalogu> kataloglariGetir() {
 		return this.katalogListesi;
 	}
