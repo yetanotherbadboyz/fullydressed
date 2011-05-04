@@ -24,6 +24,9 @@ public class Oda {
 	public boolean isAvailable() {
 		return uygunluk;
 	}
+	public void odaKataloguAyarla(OdaKatalogu odaKatalogu){
+		this.odaKatalogu = odaKatalogu;
+	}
 	
 	public boolean uygunMu(Musteri musteri) {
 		if (!this.isAvailable()){
@@ -49,6 +52,10 @@ public class Oda {
 	public void katalogSec(int _katalogID) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public float tutarOgren() {
+		return 0;
 	}
 
 }

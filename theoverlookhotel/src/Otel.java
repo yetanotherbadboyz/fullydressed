@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 
@@ -179,5 +180,25 @@ public class Otel {
 	public void otelOzellikleriniGir(String _otelAdi, int _otelID) {
 		isimAyarla(_otelAdi);
 		otelIDAyarla(_otelID);
+	}
+
+	public void uygunOdaSec(int odaID, Kiralama kiralama) {
+		Oda _oda = this.odaGetir(odaID);
+		kiralama.odaSec(_oda);
+		
+		
+		
+	}
+
+	public float kiralamaTarihiSec(GregorianCalendar _baslangicTarihi,
+			GregorianCalendar _bitisTarihi, Kiralama kiralama) {
+		kiralama.kiralamaTarihiSec(_baslangicTarihi, _bitisTarihi);
+		float tutar = kiralama.tutarOgren();
+		return tutar;
+	}
+
+	public void kiralamaSonlandir(Kiralama kiralama) {
+		this.kiralamaSonlandir(kiralama);
+		
 	}
 }

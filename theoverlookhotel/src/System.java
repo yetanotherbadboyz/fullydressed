@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 
 public class System {
 	private List<Otel> otelListesi = new ArrayList<Otel>();
 	private Otel aktifOtel;
+	private Kiralama kiralama;
 	
 	public Musteri musteriKaydiIsleminiBaslat() {
 		return aktifOtel.musteriKaydiIsleminiBaslat();
@@ -22,18 +24,23 @@ public class System {
 
 	}
 	
-	public void uygunOdaSec() {
-		// TODO Auto-generated method stub
+	public void uygunOdaSec(int odaID) {
+		aktifOtel.uygunOdaSec(odaID, kiralama);
 
 	}
 	
-	public void kiralamaTarihiSec() {
-		// TODO Auto-generated method stub
+	public float kiralamaTarihiSec(int girisGun, int girisAy, int girisYil,
+								int cikisGun, int cikisAy, int cikisYil) {
+		GregorianCalendar _baslangicTarihi = new GregorianCalendar(girisYil, girisAy, girisYil);
+		GregorianCalendar _bitisTarihi = new GregorianCalendar(cikisYil, cikisAy, cikisGun);
+		float tutar = aktifOtel.kiralamaTarihiSec(_baslangicTarihi, _bitisTarihi, kiralama);
+		return tutar;
+		
 
 	}
 	
 	public void kiralamaSonlandir() {
-		// TODO Auto-generated method stub
+		aktifOtel.kiralamaSonlandir(kiralama);
 
 	}
 	

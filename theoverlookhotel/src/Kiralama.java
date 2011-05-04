@@ -7,6 +7,7 @@ public class Kiralama {
 	private Oda kiralananOda;
 	private Musteri kiralayanMusteri;
 	private int fiyat;
+	private boolean sonlanma;
 	
 	public Kiralama(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi, Oda _kiralananOda, 
 			Musteri _kiralayanMusteri) {
@@ -15,6 +16,8 @@ public class Kiralama {
 		this.kiralananOda = _kiralananOda;
 		this.kiralayanMusteri = _kiralayanMusteri;
 		this.uygunluk = true;
+		this.sonlanma = false;
+		
 	}
 	
 	public Kiralama() {
@@ -63,4 +66,20 @@ public class Kiralama {
 		this.fiyat = fiyat;
 	}
 
+	public void odaSec(Oda _oda) {
+		this.setKiralananOda(_oda);
+		
+	}
+
+	public float tutarOgren() {
+		return this.kiralananOda.tutarOgren();
+	}
+	
+	public boolean sonlandiMi(){
+		return this.sonlanma;
+	}
+	
+	public void sonlandir(){
+		this.sonlanma = true;
+	}
 }
