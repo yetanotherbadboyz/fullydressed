@@ -203,4 +203,5 @@ public class Otel {
 		this.kiralamaSonlandir(kiralama);
 		
 	}
+
 }

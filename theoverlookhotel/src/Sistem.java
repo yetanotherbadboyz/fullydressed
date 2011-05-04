@@ -78,12 +78,20 @@ public class Sistem {
 
 	}
 	
-	public void anaMenuYazdir() {
-		System.out.println("-------TheOverLookHotel-------\n" +
+	public void anaMenuYazdir(){
+		System.out.println("-----TheOverLookHotel Systems-----\n" +
+				"\n1. Otele giriş." +
+				"\n2. Otel yarat." +
+				"\n0. Çıkış." +
+				"\n-----------TheOverLookHotel Systems---------Seçiminiz: ");
+	}
+	
+	public void otelYazdir() {
+		System.out.println("-------"+aktifOtel.isimGetir()+"-------\n" +
 				"\n1. Sistem'e Resepsiyonist olarak giriş yap. " +
 				"\n2. Sistem'e Yönetici olarak giriş yap." +
 				"\n\n\n0. Çıkış." +
-				"\n\n-------TheOverLookHotel-------\nSeçiminiz: ");
+				"\n\n-------"+aktifOtel.isimGetir()+"-------\nSeçiminiz: ");
 	}
 	
 	private static void resepsiyonistMenuYazdir() {
@@ -93,7 +101,8 @@ public class Sistem {
 				"\n2. Müşteri Listeleme işlemi." +
 				"\n3. Oda Kiralama İşlemi." +
 				"\n4. Boş Oda Listeleme İşlemi" +
-				"\n\n\n9. Ana Menü'ye geri dön." +
+				"\n\n\n8. Otel Menü'ye geri dön." +
+				"\n9. Sistem Menü'ye geri gön." +
 				"\n0. Sistemden Çıkış." +
 				"\n\n-------TheOverLookHotel-------\nSeçiminiz: ");
 
@@ -108,15 +117,24 @@ public class Sistem {
 				"\n4. Boş Oda Listeleme İşlemi" +
 				"\n5. Yeni Oda Kayıt işlemi." +
 				"\n6. Yeni Resepsiyonist Kayıt işlemi." +
-				"\n\n\n9. Ana Menü'ye geri dön." +
+				"\n\n\n8. Otel Menü'ye geri dön." +
+				"\n9. Sistem Menü'ye geri gön." +
 				"\n0. Sistemden Çıkış." +
 				"\n\n-------TheOverLookHotel-------\nSeçiminiz: ");
 
 	}
 	
-	private boolean resepsiyonistIDSorgula(int id){
+	public boolean resepsiyonistIDSorgula(int id){
 		for (Resepsiyonist i: aktifOtel.getReceptionistList()){
 			if (i.resepsiyonistIDGetir() == id)
+				return true;
+		}
+		return false;
+	}
+	
+	public boolean otelIDSorgula(int id){
+		for (Otel i: otelListesi){
+			if (i.otelIDGetir() == id)
 				return true;
 		}
 		return false;
@@ -129,6 +147,14 @@ public class Sistem {
 	
 	public Otel aktifOtelGetir(){
 		return this.aktifOtel;
+	}
+	
+	public Otel otelGetir(int id){
+		for (Otel i: otelListesi){
+			if (i.otelIDGetir() == id)
+				return i;
+		}
+		return null;
 	}
 
 	
@@ -144,78 +170,94 @@ public class Sistem {
 			sistem.anaMenuYazdir();
 			gelenInt = in.nextInt();
 			if (gelenInt == 1){
-				System.out.println("Resepsiyonist ID giriniz: ");
-				id = in.nextInt();
-				if (!sistem.resepsiyonistIDSorgula(id)){
-					System.err.println("Hatalı ID!...");
+				System.out.println("Otel ID giriniz: ");
+				int gelenID = in.nextInt();
+				if (!sistem.otelIDSorgula(gelenID)){
+					System.err.println("Yanlış Otel ID!...");
 					continue;
-					
 				}
-					
+				sistem.aktifOtelAyarla(sistem.otelGetir(gelenID));
+			}
+			else if (gelenInt == 2){
 				
-				while (gelenInt != 9 && gelenInt != 0){
-					resepsiyonistMenuYazdir();
-					gelenInt = in.nextInt();
-					// FIXME:
-					in.nextLine();
-					if (gelenInt == 1){
+			}
+			while (gelenInt != 9 && gelenInt != 0){
+				sistem.otelYazdir();
+				gelenInt = in.nextInt();
+				if (gelenInt == 1){
+					System.out.println("Resepsiyonist ID giriniz: ");
+					id = in.nextInt();
+					if (!sistem.resepsiyonistIDSorgula(id)){
+						System.err.println("Hatalı ID!...");
+						continue;
 						
-						Musteri __musteri = sistem.musteriKaydiIsleminiBaslat();
-						
-						System.out.println("İsim giriniz: ");
-						String __isim = in.nextLine();
-						System.out.println("Soyisim giriniz: ");
-						String __soyisim = in.nextLine();
-						System.out.println("Tc Kimlik NO giriniz: ");
-						long __id = in.nextLong();
-						System.out.println("Yaş giriniz: ");
-						short __yas = in.nextShort();
-						sistem.musteriKayitBilgileriniGonder(__musteri, __isim, __soyisim, __id, __yas);
 					}
+						
 					
-					else if (gelenInt == 2){
-						for (Musteri i: sistem.aktifOtelGetir().musteriListesiGetir()){
-							System.out.println("| İsim: " + i.adGetir() + "| Soyisim: " + i.soyadGetir() 
-									+ "| Tc Kimlik: " + i.tcKimlikNoGetir() + "| Yaş: " + i.yasGetir() + " |");
+					while (gelenInt != 8 && gelenInt != 9 && gelenInt != 0){
+						resepsiyonistMenuYazdir();
+						gelenInt = in.nextInt();
+						// FIXME:
+						in.nextLine();
+						if (gelenInt == 1){
+							
+							Musteri __musteri = sistem.musteriKaydiIsleminiBaslat();
+							
+							System.out.println("İsim giriniz: ");
+							String __isim = in.nextLine();
+							System.out.println("Soyisim giriniz: ");
+							String __soyisim = in.nextLine();
+							System.out.println("Tc Kimlik NO giriniz: ");
+							long __id = in.nextLong();
+							System.out.println("Yaş giriniz: ");
+							short __yas = in.nextShort();
+							sistem.musteriKayitBilgileriniGonder(__musteri, __isim, __soyisim, __id, __yas);
 						}
 						
-						in.nextLine();
+						else if (gelenInt == 2){
+							for (Musteri i: sistem.aktifOtelGetir().musteriListesiGetir()){
+								System.out.println("| İsim: " + i.adGetir() + "| Soyisim: " + i.soyadGetir() 
+										+ "| Tc Kimlik: " + i.tcKimlikNoGetir() + "| Yaş: " + i.yasGetir() + " |");
+							}
+							
+							in.nextLine();
+						}
+						
 					}
-					
-				}
-			}
-			
-			else if (gelenInt == 2){
-				System.out.println("Yönetici ID giriniz: ");
-				id = in.nextInt();
-				if (id != 237){
-					System.err.println("Hatalı ID!...");
-					continue;
 				}
 				
-				while (gelenInt != 9 && gelenInt != 0){
-					yoneticiMenuYazdir();
-					gelenInt = in.nextInt();
-					// FIXME:
-					in.nextLine();
-					if (gelenInt == 6){
-						Resepsiyonist __resepsiyonist = sistem.resepsiyonistEklemeIsleminiBaslat();
-						System.out.println("İsim giriniz: ");
-						String __isim = in.nextLine();
-						System.out.println("Soyisim giriniz: ");
-						String __soyisim = in.nextLine();
-						System.out.println("ID giriniz: ");
-						int __id = in.nextInt();
-						sistem.resepsiyonistOzellikleriniGir(__resepsiyonist, __isim, __soyisim, __id);
+				else if (gelenInt == 2){
+					System.out.println("Yönetici ID giriniz: ");
+					id = in.nextInt();
+					if (id != 237){
+						System.err.println("Hatalı ID!...");
 						continue;
 					}
+					
+					while (gelenInt != 8 && gelenInt != 9 && gelenInt != 0){
+						yoneticiMenuYazdir();
+						gelenInt = in.nextInt();
+						// FIXME:
+						in.nextLine();
+						if (gelenInt == 6){
+							Resepsiyonist __resepsiyonist = sistem.resepsiyonistEklemeIsleminiBaslat();
+							System.out.println("İsim giriniz: ");
+							String __isim = in.nextLine();
+							System.out.println("Soyisim giriniz: ");
+							String __soyisim = in.nextLine();
+							System.out.println("ID giriniz: ");
+							int __id = in.nextInt();
+							sistem.resepsiyonistOzellikleriniGir(__resepsiyonist, __isim, __soyisim, __id);
+							continue;
+						}
+					}
 				}
-			}
-			else if (gelenInt == 0)
-				System.exit(0);
-			
-			else {
-				System.out.println("\n\nYanlis Secim.\n\n");
+				else if (gelenInt == 0)
+					System.exit(0);
+				
+				else {
+					System.out.println("\n\nYanlis Secim.\n\n");
+				}
 			}
 		}
 	}
