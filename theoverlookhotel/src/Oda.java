@@ -41,4 +41,14 @@ public class Oda {
 		this.bosOlma = bosOlmaDurumu;
 	}
 
+	public void odaOzellikleriBelirt(int odaNo) {
+		odaIDAyarla(odaNo);
+		
+	}
+
+	public void katalogSec(int _katalogID) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

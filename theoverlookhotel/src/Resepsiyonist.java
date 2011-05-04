@@ -42,4 +42,12 @@ public class Resepsiyonist {
 		this.uygunluk = uygunMu;
 	}
 
+
+	public void resepsiyonistOzellikleriniGir(String _ad, String _soyad,
+			int _resepsiyonistID) {
+		isimAyarla(_ad);
+		soyisimAyarla(_soyad);
+		resepsiyonistIDAyarla(_resepsiyonistID);
+	}
+
 }
