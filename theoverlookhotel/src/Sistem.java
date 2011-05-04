@@ -3,7 +3,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 
-public class System {
+public class Sistem {
 	private List<Otel> otelListesi = new ArrayList<Otel>();
 	private Otel aktifOtel;
 	private Kiralama kiralama;
@@ -79,6 +79,7 @@ public class System {
 	
 	
 	public static void main(String[] args) {
+		
 		
 	}
 
