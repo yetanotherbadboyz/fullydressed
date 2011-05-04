@@ -51,4 +51,12 @@ public class Musteri {
 		this.yas = yas;
 	}
 
+	public void bilgileriKaydet(String musteriAdi, String musteriSoyadi,
+			int musteriTcKimlikNo, short yas) {
+		adAyarla(musteriAdi);
+		soyadAyarla(musteriSoyadi);
+		tcKimlikNoAyarla(musteriTcKimlikNo);
+		yasAyarla(yas);
+	}
+
 }

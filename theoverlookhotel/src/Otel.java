@@ -17,6 +17,36 @@ public class Otel {
 	public void musteriListesiAyarla(List<Musteri> musteriListesi) {
 		this.musteriListesi = musteriListesi;
 	}
+	
+	public void musteriEkle(Musteri _musteri){
+		musteriListesi.add(_musteri);
+	}
+	
+	public void musteriSil(int _tcKimlikNo){
+		for (Musteri i: musteriListesi){
+			if (i.tcKimlikNoGetir() == _tcKimlikNo)
+				musteriListesi.remove(i);
+		}
+	}
+	
+	public Musteri musteriGetir(int _tcKimlikNo){
+		for (Musteri i: musteriListesi){
+			if (i.tcKimlikNoGetir() == _tcKimlikNo)
+				return i;
+		}
+		return null;
+	}
+	
+	public Musteri musteriKaydiIsleminiBaslat() {
+		Musteri _musteri = new Musteri();
+		musteriEkle(_musteri);
+		return _musteri;
+	}
+	
+	public void musteriKayitBilgileriniGonder(Musteri m, String musteriAdi, String musteriSoyadi, 
+			int musteriTcKimlikNo, short yas) {
+		m.bilgileriKaydet(musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
+	}
 
 	public int otelIDGetir() {
 		return otelID;

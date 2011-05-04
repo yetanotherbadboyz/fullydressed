@@ -1,67 +1,71 @@
+import java.util.List;
+
 
 public class System {
+	private List<Otel> otelListesi;
+	private Otel aktifOtel;
 	
-	private void musteriKaydiIsleminiBaslat() {
+	public Musteri musteriKaydiIsleminiBaslat() {
+		return aktifOtel.musteriKaydiIsleminiBaslat();
+
+	}
+	
+	public void musteriKayitBilgileriniGonder(Musteri m, String musteriAdi, String musteriSoyadi, 
+			int musteriTcKimlikNo, short yas) {
+		aktifOtel.musteriKayitBilgileriniGonder(m, musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
+	}
+	
+	public void odaKiralamaIsleminiBaslat() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void kayitBilgileriniGonder() {
+	public void uygunOdaSec() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void odaKiralamaIsleminiBaslat() {
+	public void kiralamaTarihiSec() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void uygunOdaSec() {
+	public void kiralamaSonlandir() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void kiralamaTarihiSec() {
+	public void odaEklemeIsleminiBaslat() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void kiralamaSonlandir() {
+	public void katalogSec() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void odaEklemeIsleminiBaslat() {
+	public void odaOzellikleriBelirt() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void katalogSec() {
+	public void otelEklemeIsleminiBaslat() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void odaOzellikleriBelirt() {
+	public void otelOzellikleriniGir() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void otelEklemeIsleminiBaslat() {
+	public void resepsiyonistEklemeIsleminiBaslat() {
 		// TODO Auto-generated method stub
 
 	}
 	
-	private void otelOzellikleriniGir() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	private void resepsiyonistEklemeIsleminiBaslat() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	private void resepsiyonistOzellikleriniGir() {
+	public void resepsiyonistOzellikleriniGir() {
 		// TODO Auto-generated method stub
 
 	}
