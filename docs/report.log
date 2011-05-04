@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  4 MAY 2011 12:15
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  4 MAY 2011 14:23
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -534,16 +534,16 @@ Overfull \vbox (35.12766pt too high) has occurred while \output is active []
 
 
 [18 <./dia/ssd-usecase2.png (PNG copy)>]
-<dia/eventdiagram-usecase2.png, id=71, 512.66531pt x 706.13812pt>
+<dia/eventdiagram-usecase2.png, id=71, 941.5175pt x 681.54625pt>
 File: dia/eventdiagram-usecase2.png Graphic file (type png)
 
 <use dia/eventdiagram-usecase2.png>
-Overfull \hbox (59.69615pt too wide) in paragraph at lines 553--554
+Overfull \hbox (488.54732pt too wide) in paragraph at lines 553--554
  [] 
  []
 
 [19]
-Overfull \vbox (35.62953pt too high) has occurred while \output is active []
+Overfull \vbox (11.03772pt too high) has occurred while \output is active []
 
 
 [20 <./dia/eventdiagram-usecase2.png (PNG copy)>]
@@ -755,7 +755,7 @@ Here is how much of TeX's memory you used:
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (43 pages, 483989 bytes).
+Output written on report.pdf (43 pages, 477639 bytes).
 PDF statistics:
  180 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams
