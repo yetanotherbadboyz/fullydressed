@@ -8,7 +8,24 @@ public class Otel {
 	private List<Resepsiyonist> resepsiyonistListesi;
 	private List<Musteri> musteriListesi;
 	private boolean uygunluk;
+	private int otelID;
 	
+	public List<Musteri> musteriListesiGetir() {
+		return musteriListesi;
+	}
+
+	public void musteriListesiAyarla(List<Musteri> musteriListesi) {
+		this.musteriListesi = musteriListesi;
+	}
+
+	public int otelIDGetir() {
+		return otelID;
+	}
+
+	public void otelIDAyarla(int _otelID) {
+		this.otelID = _otelID;
+	}
+
 	public Otel(String _Name) {
 		this.isim = _Name;
 		this.uygunluk = true;
