@@ -15,8 +15,9 @@ public class System {
 		aktifOtel.musteriKayitBilgileriniGonder(m, musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
 	}
 	
-	public void odaKiralamaIsleminiBaslat() {
-		// TODO Auto-generated method stub
+	public void odaKiralamaIsleminiBaslat(int musteriTcKimlikNo) {
+		Musteri musteri = aktifOtel.musteriGetir(musteriTcKimlikNo);
+		
 
 	}
 	
@@ -69,6 +70,7 @@ public class System {
 		// TODO Auto-generated method stub
 
 	}
+	
 	
 	public static void main(String[] args) {
 		
