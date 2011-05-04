@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class System {
-	private List<Otel> otelListesi;
+	private List<Otel> otelListesi = new ArrayList<Otel>();
 	private Otel aktifOtel;
 	
 	public Musteri musteriKaydiIsleminiBaslat() {
@@ -36,38 +37,36 @@ public class System {
 
 	}
 	
-	public void odaEklemeIsleminiBaslat() {
-		// TODO Auto-generated method stub
+	public Oda odaEklemeIsleminiBaslat() {
+		return aktifOtel.odaYarat();
+	}
+	
+	public void katalogSec(Oda o, int _katalogID) {
+		o.katalogSec(_katalogID);
 
 	}
 	
-	public void katalogSec() {
-		// TODO Auto-generated method stub
+	public void odaOzellikleriBelirt(Oda o, int odaNo) {
+		o.odaOzellikleriBelirt(odaNo);
+	}
+	
+	public Otel otelEklemeIsleminiBaslat() {
+		Otel _otel = new Otel();
+		otelListesi.add(_otel);
+		return _otel;
+	}
+	
+	public void otelOzellikleriniGir(Otel _otel, String otelAdi, int otelID) {
+		_otel.otelOzellikleriniGir(otelAdi, otelID);
+	}
+	
+	public Resepsiyonist resepsiyonistEklemeIsleminiBaslat() {
+		return aktifOtel.resepsiyonistYarat();
 
 	}
 	
-	public void odaOzellikleriBelirt() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	public void otelEklemeIsleminiBaslat() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	public void otelOzellikleriniGir() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	public void resepsiyonistEklemeIsleminiBaslat() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	public void resepsiyonistOzellikleriniGir() {
-		// TODO Auto-generated method stub
+	public void resepsiyonistOzellikleriniGir(Resepsiyonist _resepsiyonist, String ad, String soyad, int resepsiyonistID) {
+		_resepsiyonist.resepsiyonistOzellikleriniGir(ad, soyad, resepsiyonistID);
 
 	}
 	

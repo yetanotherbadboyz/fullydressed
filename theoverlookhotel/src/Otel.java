@@ -165,6 +165,19 @@ public class Otel {
 	public void setAvailable(boolean isAvailable) {
 		this.uygunluk = isAvailable;
 	}
-	
 
+	public Oda odaYarat() {
+		return odaGetir(odaEkle());
+	}
+
+	public Resepsiyonist resepsiyonistYarat() {
+		Resepsiyonist _resepsiyonist = new Resepsiyonist();
+		resepsiyonistListesi.add(_resepsiyonist);
+		return _resepsiyonist;
+	}
+
+	public void otelOzellikleriniGir(String _otelAdi, int _otelID) {
+		isimAyarla(_otelAdi);
+		otelIDAyarla(_otelID);
+	}
 }
