@@ -3,6 +3,8 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.sound.midi.SysexMessage;
+
 
 public class Sistem {
 	private List<Otel> otelListesi = new ArrayList<Otel>();
@@ -114,21 +116,59 @@ public class Sistem {
 
 	}
 	
+	private boolean resepsiyonistIDSorgula(int id){
+		for (Resepsiyonist i: aktifOtel.getReceptionistList()){
+			if (i.resepsiyonistIDGetir() == id)
+				return true;
+		}
+		return false;
+	}
+	
+	private void aktifOtelAyarla(Otel otel) {
+		this.aktifOtel = otel;
+		
+	}
+
+	
 	
 	public static void main(String[] args) {
 		Sistem sistem = new Sistem();
+		sistem.aktifOtelAyarla(new Otel());
 		Scanner in = new Scanner(System.in);
 		int gelen = -1;
+		int id = 0;
 		while (gelen != 0){
 			sistem.anaMenuYazdir();
 			gelen = in.nextInt();
-			if (gelen == 1)
+			if (gelen == 1){
+				System.out.println("Resepsiyonist ID giriniz: ");
+				id = in.nextInt();
+				if (!sistem.resepsiyonistIDSorgula(id)){
+					System.err.println("Hatalı ID!...");
+					System.exit(1);
+					
+				}
+					
 				resepsiyonistMenuYazdir();
-				
+				while (gelen != 9 && gelen != 0){
+					System.out.println("resepmenu: " + gelen);
+					gelen = in.nextInt();
+				}
+			}
 			
-			else if (gelen == 2)
+			else if (gelen == 2){
+				System.out.println("Yönetici ID giriniz: ");
+				id = in.nextInt();
+				if (id != 237){
+					System.err.println("Hatalı ID!...");
+					System.exit(1);
+				}
 				yoneticiMenuYazdir();
-			
+				while (gelen != 9 && gelen != 0){
+					System.out.println("resepmenu: " + gelen);
+					gelen = in.nextInt();
+				}
+			}
 			else if (gelen == 0)
 				System.exit(0);
 			
@@ -138,4 +178,5 @@ public class Sistem {
 		}
 	}
 
+	
 }
