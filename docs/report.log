@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  3 MAY 2011 23:13
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  4 MAY 2011 12:15
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -572,145 +572,176 @@ Underfull \hbox (badness 10000) in paragraph at lines 626--627
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 633--634
+Overfull \hbox (4.97787pt too wide) in paragraph at lines 631--638
+\OT1/cmr/bx/n/12 Creator: \OT1/cmr/m/n/12 Ki-ra-lama ya-ratma otel ta-raf^^Pnda
+n ger^^Xcekle^^Xstirilir. []^^?unk^^?u ki-ra-la-ma-larla do^^Ugrudan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--638
 
  []
 
 
-Overfull \hbox (2.7007pt too wide) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 631--638
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+
+Overfull \hbox (2.7007pt too wide) in paragraph at lines 648--649
 []\OT1/cmr/m/n/12 Odan^^Pn tan^^Pmlanmas^^P ile il-gili her-hangi bir ek-sik-li
 k ol-ma-mas^^Pn^^P
  []
 
-<dia/usecase3.png, id=85, 355.3275pt x 309.155pt>
+<dia/usecase3.png, id=88, 355.3275pt x 309.155pt>
 File: dia/usecase3.png Graphic file (type png)
  <use dia/usecase3.png>
-[23] [24 <./dia/usecase3.png (PNG copy)>]
-<dia/ssd-usecase3.png, id=92, 467.7475pt x 598.235pt>
+[24] [25 <./dia/usecase3.png (PNG copy)>]
+<dia/ssd-usecase3.png, id=96, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase3.png Graphic file (type png)
 
 <use dia/ssd-usecase3.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 682--683
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 691--692
  [] 
  []
 
-[25 <./dia/ssd-usecase3.png (PNG copy)>]
-<dia/eventdiagram-usecase3.png, id=97, 155.83218pt x 551.81157pt>
+[26 <./dia/ssd-usecase3.png (PNG copy)>]
+<dia/eventdiagram-usecase3.png, id=100, 209.28188pt x 515.67656pt>
 File: dia/eventdiagram-usecase3.png Graphic file (type png)
 
-<use dia/eventdiagram-usecase3.png> [26 <./dia/eventdiagram-usecase3.png (PNG c
+<use dia/eventdiagram-usecase3.png> [27 <./dia/eventdiagram-usecase3.png (PNG c
 opy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 743--744
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
-[27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 752--753
+[28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 758--761
 
  []
 
-<dia/usecase4.png, id=107, 260.975pt x 212.795pt>
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
+
+ []
+
+<dia/usecase4.png, id=113, 260.975pt x 212.795pt>
 File: dia/usecase4.png Graphic file (type png)
  <use dia/usecase4.png>
-[29] [30 <./dia/usecase4.png (PNG copy)>]
-<dia/ssd-usecase4.png, id=114, 467.7475pt x 598.235pt>
+[31] [32 <./dia/usecase4.png (PNG copy)>]
+<dia/ssd-usecase4.png, id=121, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase4.png Graphic file (type png)
 
 <use dia/ssd-usecase4.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 804--805
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 817--818
  [] 
  []
 
-[31 <./dia/ssd-usecase4.png (PNG copy)>]
-<dia/eventdiagram-usecase4.png, id=119, 109.1578pt x 374.90062pt>
+[33 <./dia/ssd-usecase4.png (PNG copy)>]
+<dia/eventdiagram-usecase4.png, id=125, 109.1578pt x 374.90062pt>
 File: dia/eventdiagram-usecase4.png Graphic file (type png)
 
-<use dia/eventdiagram-usecase4.png> [32 <./dia/eventdiagram-usecase4.png (PNG c
+<use dia/eventdiagram-usecase4.png> [34 <./dia/eventdiagram-usecase4.png (PNG c
 opy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 823--824
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--839
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 849--850
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 855--856
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 867--869
 
  []
 
-<dia/usecase5.png, id=126, 260.975pt x 305.14pt>
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
+
+ []
+
+<dia/usecase5.png, id=135, 260.975pt x 305.14pt>
 File: dia/usecase5.png Graphic file (type png)
  <use dia/usecase5.png>
-[34] [35 <./dia/usecase5.png (PNG copy)>]
-<dia/ssd-usecase5.png, id=133, 467.7475pt x 598.235pt>
+[37] [38 <./dia/usecase5.png (PNG copy)>]
+<dia/ssd-usecase5.png, id=143, 467.7475pt x 598.235pt>
 File: dia/ssd-usecase5.png Graphic file (type png)
 
 <use dia/ssd-usecase5.png>
-Overfull \hbox (14.77844pt too wide) in paragraph at lines 901--902
+Overfull \hbox (14.77844pt too wide) in paragraph at lines 918--919
  [] 
  []
 
-[36 <./dia/ssd-usecase5.png (PNG copy)>]
-<dia/eventdiagram-usecase5.png, id=137, 111.41624pt x 614.295pt>
+[39 <./dia/ssd-usecase5.png (PNG copy)>]
+<dia/eventdiagram-usecase5.png, id=147, 111.41624pt x 614.295pt>
 File: dia/eventdiagram-usecase5.png Graphic file (type png)
 
-<use dia/eventdiagram-usecase5.png> [37 <./dia/eventdiagram-usecase5.png (PNG c
+<use dia/eventdiagram-usecase5.png> [40 <./dia/eventdiagram-usecase5.png (PNG c
 opy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 920--921
+Underfull \hbox (badness 10000) in paragraph at lines 937--938
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--936
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--947
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
 
  []
 
-[38] <dia/allusecasessmall.png, id=145, 276.28218pt x 595.47469pt>
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 967--969
+
+ []
+
+[42] <dia/allusecasessmall.png, id=157, 276.28218pt x 595.47469pt>
 File: dia/allusecasessmall.png Graphic file (type png)
 
 <use dia/allusecasessmall.png>
 
-! LaTeX Error: \begin{description} on input line 939 ended by \end{document}.
+! LaTeX Error: \begin{description} on input line 956 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.958 \end{document}
+l.980 \end{document}
                     
 ? 
-[39 <./dia/allusecasessmall.png (PNG copy)>] (./report.aux (./header.aux)) )
+[43 <./dia/allusecasessmall.png (PNG copy)>] (./report.aux (./header.aux)) )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 939 (\begingroup)
+### semi simple group (level 1) entered at line 956 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  2986 strings out of 493760
@@ -724,10 +755,10 @@ Here is how much of TeX's memory you used:
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (39 pages, 478502 bytes).
+Output written on report.pdf (43 pages, 483989 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 180 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
