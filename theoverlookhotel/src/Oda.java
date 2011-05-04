@@ -10,6 +10,10 @@ public class Oda {
 		this.bosOlma = true;
 	}
 	
+	public Oda() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int odaIDGetir() {
 		return odaID;
 	}

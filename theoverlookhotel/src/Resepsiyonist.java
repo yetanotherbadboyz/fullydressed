@@ -12,6 +12,11 @@ public class Resepsiyonist {
 		this.uygunluk = true;
 	}
 	
+	
+	public Resepsiyonist() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public String isimGetir() {
 		return isim;
 	}

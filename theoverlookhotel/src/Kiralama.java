@@ -8,6 +8,19 @@ public class Kiralama {
 	private Musteri kiralayanMusteri;
 	private int fiyat;
 	
+	public Kiralama(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi, Oda _kiralananOda, 
+			Musteri _kiralayanMusteri) {
+		this.baslangicTarihi = _baslangicTarihi;
+		this.bitisTarihi = _bitisTarihi;
+		this.kiralananOda = _kiralananOda;
+		this.kiralayanMusteri = _kiralayanMusteri;
+		this.uygunluk = true;
+	}
+	
+	public Kiralama() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public void kiralamaTarihiSec(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi){
 		this.baslangicTarihi = _baslangicTarihi;
 		this.bitisTarihi = _bitisTarihi;

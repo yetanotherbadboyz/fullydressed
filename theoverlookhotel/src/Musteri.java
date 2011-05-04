@@ -14,6 +14,10 @@ public class Musteri {
 		this.uygunluk = true;
 	}
 	
+	public Musteri() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public boolean uygunlukGetir(){
 		return this.uygunluk;
 	}

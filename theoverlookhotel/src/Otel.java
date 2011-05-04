@@ -6,6 +6,7 @@ public class Otel {
 	private String isim;
 	private List<Oda> odaListesi;
 	private List<Resepsiyonist> resepsiyonistListesi;
+	private List<Musteri> musteriListesi;
 	private boolean uygunluk;
 	
 	public Otel(String _Name) {
@@ -13,7 +14,12 @@ public class Otel {
 		this.uygunluk = true;
 		odaListesi = new ArrayList<Oda>();
 		resepsiyonistListesi = new ArrayList<Resepsiyonist>();
+		musteriListesi = new ArrayList<Musteri>();
 		
+	}
+	
+	public Otel() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	public int resepsiyonistEkle(String _isim, String _soyisim){
