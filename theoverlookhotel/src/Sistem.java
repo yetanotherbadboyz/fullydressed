@@ -20,9 +20,10 @@ public class Sistem {
 		aktifOtel.musteriKayitBilgileriniGonder(m, musteriAdi, musteriSoyadi, __id, yas);
 	}
 	
-	public void odaKiralamaIsleminiBaslat(long musteriTcKimlikNo) {
+	public List<Oda> odaKiralamaIsleminiBaslat(long musteriTcKimlikNo) {
 		Musteri musteri = aktifOtel.musteriGetir(musteriTcKimlikNo);
-		List<Oda> uygunOdalar = aktifOtel.uygunOdalariGetir(musteri);
+		this.kiralama = new Kiralama(musteri);
+		return aktifOtel.uygunOdalariGetir(musteri);
 
 	}
 	
@@ -40,9 +41,9 @@ public class Sistem {
 	
 	public float kiralamaTarihiSec(int girisGun, int girisAy, int girisYil,
 								int cikisGun, int cikisAy, int cikisYil) {
-		GregorianCalendar _baslangicTarihi = new GregorianCalendar(girisYil, girisAy, girisYil);
-		GregorianCalendar _bitisTarihi = new GregorianCalendar(cikisYil, cikisAy, cikisGun);
-		float tutar = aktifOtel.kiralamaTarihiSec(_baslangicTarihi, _bitisTarihi, kiralama);
+
+		float tutar = aktifOtel.kiralamaTarihiSec(new GregorianCalendar(girisYil, girisAy, girisGun), 
+				new GregorianCalendar(cikisYil, cikisAy, cikisGun), kiralama);
 		return tutar;
 		
 
@@ -105,6 +106,7 @@ public class Sistem {
 				"\n2. Müşteri Listeleme işlemi." +
 				"\n3. Oda Kiralama İşlemi." +
 				"\n4. Boş Oda Listeleme İşlemi" +
+				"\n7. Kiralamaları Listeleme işlemi." +
 				"\n\n\n8. Otel Menü'ye geri dön." +
 				"\n9. Sistem Menü'ye geri gön." +
 				"\n0. Sistemden Çıkış." +
@@ -122,6 +124,7 @@ public class Sistem {
 				"\n4. Boş Oda Listeleme İşlemi" +
 				"\n5. Yeni Oda Kayıt işlemi." +
 				"\n6. Yeni Resepsiyonist Kayıt işlemi." +
+				"\n7. Kiralamaları Listeleme işlemi." +
 				"\n\n\n8. Otel Menü'ye geri dön." +
 				"\n9. Sistem Menü'ye geri gön." +
 				"\n0. Sistemden Çıkış." +
@@ -172,6 +175,14 @@ public class Sistem {
 				return i;
 		}
 		return null;
+	}
+	
+	public Kiralama kiralamaGetir(){
+		return this.kiralama;
+	}
+	
+	public void kiralamaAyarla(Kiralama _kiralama){
+		this.kiralama = _kiralama;
 	}
 	
 	
@@ -262,10 +273,55 @@ public class Sistem {
 							in.nextLine();
 						}
 						
+						else if (gelenInt == 3){
+							System.out.println("Tc Kimlik No girin: ");
+							long _tcKimlikNo = in.nextLong();
+							for (Oda i: sistem.odaKiralamaIsleminiBaslat(_tcKimlikNo)){
+								System.out.println("OdaID:" + i.odaIDGetir());
+							}
+							in.nextLine();
+							System.out.println("Oda ID seçiniz: ");
+							int __odaID = in.nextInt();
+
+							sistem.uygunOdaSec(__odaID);
+							
+							System.out.println("Giris Gun: ");
+							int _girisGun = in.nextInt();
+							System.out.println("Giris Ay: ");
+							int _girisAy = in.nextInt();
+							System.out.println("Giris Yil: ");
+							int _girisYil = in.nextInt();
+							
+							System.out.println("Cikis Gun: ");
+							int _cikisGun = in.nextInt();
+							System.out.println("Cikis Ay: ");
+							int _cikisAy = in.nextInt();
+							System.out.println("Cikis Yil: ");
+							int _cikisYil = in.nextInt();
+							
+							float fiyat = sistem.kiralamaTarihiSec(_girisGun, _girisAy, _girisYil, _cikisGun, _cikisAy, _cikisYil);
+							
+							System.out.println("Fiyat: " + fiyat);
+							
+							in.nextLine();
+							
+							sistem.kiralamaSonlandir();
+						}
+						
 						else if (gelenInt == 4){
 							for (Oda i: sistem.aktifOtelGetir().odaListesiGetir())
 								System.out.println("OdaID:" + i.odaIDGetir());
 							
+							in.nextLine();
+						}
+						
+						else if (gelenInt == 7){
+							for (Kiralama i: sistem.aktifOtelGetir().kiralamaListesiGetir())
+								System.out.println("Oda: " + i.getKiralananOda().odaIDGetir() + "|Ad: " + 
+										i.getKiralayanMusteri().adGetir() + "|Giris:" + i.baslangicTarihiGetir().YEAR + ":" 
+										+ i.baslangicTarihiGetir().MONTH + ":" + i.baslangicTarihiGetir().DAY_OF_MONTH +
+										"|Cikis" + i.getBitisTarihi().YEAR + ":" + i.getBitisTarihi().MONTH + ":" +
+										i.getBitisTarihi().DAY_OF_MONTH + "Fiyat: " + i.getFiyat());
 							in.nextLine();
 						}
 						
@@ -310,6 +366,40 @@ public class Sistem {
 							in.nextLine();
 						}
 						
+						else if (gelenInt == 3){
+							System.out.println("Tc Kimlik No girin: ");
+							long _tcKimlikNo = in.nextLong();
+							for (Oda i: sistem.odaKiralamaIsleminiBaslat(_tcKimlikNo)){
+								System.out.println("OdaID:" + i.odaIDGetir());
+							}
+							System.out.println("Oda ID seçiniz: ");
+							int __odaID = in.nextInt();
+							sistem.uygunOdaSec(__odaID);
+							
+							System.out.println("Giris Gun: ");
+							int _girisGun = in.nextInt();
+							System.out.println("Giris Ay: ");
+							int _girisAy = in.nextInt();
+							System.out.println("Giris Yil: ");
+							int _girisYil = in.nextInt();
+							
+							System.out.println("Cikis Gun: ");
+							int _cikisGun = in.nextInt();
+							System.out.println("Cikis Ay: ");
+							int _cikisAy = in.nextInt();
+							System.out.println("Cikis Yil: ");
+							int _cikisYil = in.nextInt();
+							
+							float fiyat = sistem.kiralamaTarihiSec(_girisGun, _girisAy, _girisYil, _cikisGun, _cikisAy, _cikisYil);
+							
+							System.out.println("Fiyat: " + fiyat);
+							
+							in.nextLine();
+							in.nextLine();
+							
+							sistem.kiralamaSonlandir();
+						}
+						
 						else if (gelenInt == 4){
 							for (Oda i: sistem.aktifOtelGetir().odaListesiGetir())
 								System.out.println("OdaID:" + i.odaIDGetir());
@@ -340,6 +430,15 @@ public class Sistem {
 							int __id = in.nextInt();
 							sistem.resepsiyonistOzellikleriniGir(__resepsiyonist, __isim, __soyisim, __id);
 							continue;
+						}
+						else if (gelenInt == 7){
+							for (Kiralama i: sistem.aktifOtelGetir().kiralamaListesiGetir())
+								System.out.println("Oda: " + i.getKiralananOda().odaIDGetir() + "|Ad: " + 
+										i.getKiralayanMusteri().adGetir() + "|Giris:" + i.baslangicTarihiGetir().YEAR + ":" 
+										+ i.baslangicTarihiGetir().MONTH + ":" + i.baslangicTarihiGetir().DAY_OF_MONTH +
+										"|Cikis" + i.getBitisTarihi().YEAR + ":" + i.getBitisTarihi().MONTH + ":" +
+										i.getBitisTarihi().DAY_OF_MONTH + "Fiyat: " + i.getFiyat());
+							in.nextLine();
 						}
 					}
 				}

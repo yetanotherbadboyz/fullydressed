@@ -56,7 +56,7 @@ public class Oda {
 	}
 
 	public float tutarOgren() {
-		return 0;
+		return this.odaKatalogu.tutarGetir();
 	}
 
 }

@@ -5,11 +5,13 @@ import java.util.List;
 public class OdaKatalogu {
 	private String katalogAdi;
 	private int katalogID;
+	private float tutar;
 	private List<MusteriTipi> musteriTipleri = new ArrayList<MusteriTipi>();
 	
-	public OdaKatalogu(String _katalogAdi, int _katalogID) {
+	public OdaKatalogu(String _katalogAdi, int _katalogID, float _tutar) {
 		this.katalogAdi =  _katalogAdi;
 		this.katalogID = _katalogID;
+		this.tutar = _tutar;
 		MusteriTipi _musteriTipi1 = new MusteriTipi("Standart");
 		musteriTipleri.add(_musteriTipi1);
 		MusteriTipi _musteriTipi2 = new MusteriTipi("VIP");
@@ -38,6 +40,10 @@ public class OdaKatalogu {
 	
 	public void isimAyarla(String _katalogAdi) {
 		this.katalogAdi = _katalogAdi;
+	}
+
+	public float tutarGetir() {
+		return this.tutar;
 	}
 
 }

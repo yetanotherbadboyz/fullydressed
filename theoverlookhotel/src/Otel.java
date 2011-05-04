@@ -9,6 +9,7 @@ public class Otel {
 	private List<Resepsiyonist> resepsiyonistListesi;
 	private List<Musteri> musteriListesi;
 	private List<OdaKatalogu>  katalogListesi;
+	private List<Kiralama> kiralamaListesi;
 	private boolean uygunluk;
 	private int otelID;
 	
@@ -65,11 +66,12 @@ public class Otel {
 		resepsiyonistListesi = new ArrayList<Resepsiyonist>();
 		musteriListesi = new ArrayList<Musteri>();
 		katalogListesi = new ArrayList<OdaKatalogu>();
-		OdaKatalogu katalog1 = new OdaKatalogu("standart", 1);
+		kiralamaListesi = new ArrayList<Kiralama>();
+		OdaKatalogu katalog1 = new OdaKatalogu("standart", 1, (float) 2.0);
 		this.katalogEkle(katalog1);
-		OdaKatalogu katalog2 = new OdaKatalogu("vip", 2);
+		OdaKatalogu katalog2 = new OdaKatalogu("vip", 2, (float) 5.0);
 		this.katalogEkle(katalog2);
-		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3);
+		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3, (float) 1.0);
 		this.katalogEkle(katalog3);
 		
 	}
@@ -79,11 +81,12 @@ public class Otel {
 		resepsiyonistListesi = new ArrayList<Resepsiyonist>();
 		musteriListesi = new ArrayList<Musteri>();
 		katalogListesi = new ArrayList<OdaKatalogu>();
-		OdaKatalogu katalog1 = new OdaKatalogu("standart", 1);
+		kiralamaListesi = new ArrayList<Kiralama>();
+		OdaKatalogu katalog1 = new OdaKatalogu("standart", 1, (float) 2.0);
 		this.katalogEkle(katalog1);
-		OdaKatalogu katalog2 = new OdaKatalogu("vip", 2);
+		OdaKatalogu katalog2 = new OdaKatalogu("vip", 2, (float) 5.0);
 		this.katalogEkle(katalog2);
-		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3);
+		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3, (float) 1.0);
 		this.katalogEkle(katalog3);
 	}
 	
@@ -131,10 +134,10 @@ public class Otel {
 	public Oda odaGetir(int _odaID){
 		for (Oda i: odaListesi){
 			if (i.odaIDGetir() == _odaID){
-				odaListesi.remove(i);
 				return i;
 			}
 		}
+		System.err.println("oda yok.");
 		
 		return null;
 	}
@@ -202,11 +205,8 @@ public class Otel {
 	}
 
 	public void uygunOdaSec(int odaID, Kiralama kiralama) {
-		Oda _oda = this.odaGetir(odaID);
-		kiralama.odaSec(_oda);
-		
-		
-		
+		Oda oda = this.odaGetir(odaID);
+		kiralama.odaSec(oda);
 	}
 
 	public float kiralamaTarihiSec(GregorianCalendar _baslangicTarihi,
@@ -217,8 +217,12 @@ public class Otel {
 	}
 
 	public void kiralamaSonlandir(Kiralama kiralama) {
-		this.kiralamaSonlandir(kiralama);
-		
+		kiralama.sonlandir();
+		kiralamaListesi.add(kiralama);
+	}
+	
+	public List<Kiralama> kiralamaListesiGetir(){
+		return kiralamaListesi;
 	}
 	
 	public List<OdaKatalogu> kataloglariGetir() {

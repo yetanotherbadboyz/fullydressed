@@ -8,7 +8,7 @@ public class Kiralama {
 	private Musteri kiralayanMusteri;
 	private int fiyat;
 	private boolean sonlanma;
-	
+
 	public Kiralama(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi, Oda _kiralananOda, 
 			Musteri _kiralayanMusteri) {
 		this.baslangicTarihi = _baslangicTarihi;
@@ -24,6 +24,10 @@ public class Kiralama {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public Kiralama(Musteri musteri) {
+		this.kiralayanMusteri = musteri;
+	}
+
 	public void kiralamaTarihiSec(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi){
 		this.baslangicTarihi = _baslangicTarihi;
 		this.bitisTarihi = _bitisTarihi;
