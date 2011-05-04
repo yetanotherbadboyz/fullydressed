@@ -2,12 +2,12 @@
 public class Musteri {
 	private String adi;
 	private String soyadi;
-	private int tcKimlikNo;
+	private long tcKimlikNo;
 	private short yas;
 	private boolean uygunluk;
 	private MusteriTipi musteriTipi;
 	
-	public Musteri(String _adi, String _soyadi, int _tcKimlikNo, short _yas, MusteriTipi musteriTipi) {
+	public Musteri(String _adi, String _soyadi, long _tcKimlikNo, short _yas, MusteriTipi musteriTipi) {
 		this.adi = _adi;
 		this.soyadi = _soyadi;
 		this.tcKimlikNo = _tcKimlikNo;
@@ -40,10 +40,10 @@ public class Musteri {
 	public void soyadAyarla(String soyadi) {
 		this.soyadi = soyadi;
 	}
-	public int tcKimlikNoGetir() {
+	public long tcKimlikNoGetir() {
 		return tcKimlikNo;
 	}
-	public void tcKimlikNoAyarla(int _tcKimlikNo) {
+	public void tcKimlikNoAyarla(long _tcKimlikNo) {
 		this.tcKimlikNo = _tcKimlikNo;
 	}
 	public short yasGetir() {
@@ -58,7 +58,7 @@ public class Musteri {
 	}
 	
 	public void bilgileriKaydet(String musteriAdi, String musteriSoyadi,
-			int musteriTcKimlikNo, short yas) {
+			long musteriTcKimlikNo, short yas) {
 		adAyarla(musteriAdi);
 		soyadAyarla(musteriSoyadi);
 		tcKimlikNoAyarla(musteriTcKimlikNo);

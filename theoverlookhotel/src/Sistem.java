@@ -3,8 +3,6 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.sound.midi.SysexMessage;
-
 
 public class Sistem {
 	private List<Otel> otelListesi = new ArrayList<Otel>();
@@ -17,11 +15,11 @@ public class Sistem {
 	}
 	
 	public void musteriKayitBilgileriniGonder(Musteri m, String musteriAdi, String musteriSoyadi, 
-			int musteriTcKimlikNo, short yas) {
-		aktifOtel.musteriKayitBilgileriniGonder(m, musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
+			long __id, short yas) {
+		aktifOtel.musteriKayitBilgileriniGonder(m, musteriAdi, musteriSoyadi, __id, yas);
 	}
 	
-	public void odaKiralamaIsleminiBaslat(int musteriTcKimlikNo) {
+	public void odaKiralamaIsleminiBaslat(long musteriTcKimlikNo) {
 		Musteri musteri = aktifOtel.musteriGetir(musteriTcKimlikNo);
 		List<Oda> uygunOdalar = aktifOtel.uygunOdalariGetir(musteri);
 
@@ -124,52 +122,96 @@ public class Sistem {
 		return false;
 	}
 	
-	private void aktifOtelAyarla(Otel otel) {
+	public void aktifOtelAyarla(Otel otel) {
 		this.aktifOtel = otel;
 		
+	}
+	
+	public Otel aktifOtelGetir(){
+		return this.aktifOtel;
 	}
 
 	
 	
 	public static void main(String[] args) {
 		Sistem sistem = new Sistem();
-		sistem.aktifOtelAyarla(new Otel());
+		sistem.aktifOtelAyarla(new Otel("The OverLook Hotel"));
 		Scanner in = new Scanner(System.in);
-		int gelen = -1;
+		int gelenInt = -1;
+		String gelenStr = "";
 		int id = 0;
-		while (gelen != 0){
+		while (gelenInt != 0){
 			sistem.anaMenuYazdir();
-			gelen = in.nextInt();
-			if (gelen == 1){
+			gelenInt = in.nextInt();
+			if (gelenInt == 1){
 				System.out.println("Resepsiyonist ID giriniz: ");
 				id = in.nextInt();
 				if (!sistem.resepsiyonistIDSorgula(id)){
 					System.err.println("Hatalı ID!...");
-					System.exit(1);
+					continue;
 					
 				}
 					
-				resepsiyonistMenuYazdir();
-				while (gelen != 9 && gelen != 0){
-					System.out.println("resepmenu: " + gelen);
-					gelen = in.nextInt();
+				
+				while (gelenInt != 9 && gelenInt != 0){
+					resepsiyonistMenuYazdir();
+					gelenInt = in.nextInt();
+					// FIXME:
+					in.nextLine();
+					if (gelenInt == 1){
+						
+						Musteri __musteri = sistem.musteriKaydiIsleminiBaslat();
+						
+						System.out.println("İsim giriniz: ");
+						String __isim = in.nextLine();
+						System.out.println("Soyisim giriniz: ");
+						String __soyisim = in.nextLine();
+						System.out.println("Tc Kimlik NO giriniz: ");
+						long __id = in.nextLong();
+						System.out.println("Yaş giriniz: ");
+						short __yas = in.nextShort();
+						sistem.musteriKayitBilgileriniGonder(__musteri, __isim, __soyisim, __id, __yas);
+					}
+					
+					else if (gelenInt == 2){
+						for (Musteri i: sistem.aktifOtelGetir().musteriListesiGetir()){
+							System.out.println("| İsim: " + i.adGetir() + "| Soyisim: " + i.soyadGetir() 
+									+ "| Tc Kimlik: " + i.tcKimlikNoGetir() + "| Yaş: " + i.yasGetir() + " |");
+						}
+						
+						in.nextLine();
+					}
+					
 				}
 			}
 			
-			else if (gelen == 2){
+			else if (gelenInt == 2){
 				System.out.println("Yönetici ID giriniz: ");
 				id = in.nextInt();
 				if (id != 237){
 					System.err.println("Hatalı ID!...");
-					System.exit(1);
+					continue;
 				}
-				yoneticiMenuYazdir();
-				while (gelen != 9 && gelen != 0){
-					System.out.println("resepmenu: " + gelen);
-					gelen = in.nextInt();
+				
+				while (gelenInt != 9 && gelenInt != 0){
+					yoneticiMenuYazdir();
+					gelenInt = in.nextInt();
+					// FIXME:
+					in.nextLine();
+					if (gelenInt == 6){
+						Resepsiyonist __resepsiyonist = sistem.resepsiyonistEklemeIsleminiBaslat();
+						System.out.println("İsim giriniz: ");
+						String __isim = in.nextLine();
+						System.out.println("Soyisim giriniz: ");
+						String __soyisim = in.nextLine();
+						System.out.println("ID giriniz: ");
+						int __id = in.nextInt();
+						sistem.resepsiyonistOzellikleriniGir(__resepsiyonist, __isim, __soyisim, __id);
+						continue;
+					}
 				}
 			}
-			else if (gelen == 0)
+			else if (gelenInt == 0)
 				System.exit(0);
 			
 			else {

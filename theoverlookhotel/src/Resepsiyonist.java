@@ -14,7 +14,7 @@ public class Resepsiyonist {
 	
 	
 	public Resepsiyonist() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 	
 	public String isimGetir() {

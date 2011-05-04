@@ -23,16 +23,16 @@ public class Otel {
 		musteriListesi.add(_musteri);
 	}
 	
-	public void musteriSil(int _tcKimlikNo){
+	public void musteriSil(long _tcKimlikNo){
 		for (Musteri i: musteriListesi){
 			if (i.tcKimlikNoGetir() == _tcKimlikNo)
 				musteriListesi.remove(i);
 		}
 	}
 	
-	public Musteri musteriGetir(int _tcKimlikNo){
+	public Musteri musteriGetir(long musteriTcKimlikNo){
 		for (Musteri i: musteriListesi){
-			if (i.tcKimlikNoGetir() == _tcKimlikNo)
+			if (i.tcKimlikNoGetir() == musteriTcKimlikNo)
 				return i;
 		}
 		return null;
@@ -45,7 +45,7 @@ public class Otel {
 	}
 	
 	public void musteriKayitBilgileriniGonder(Musteri m, String musteriAdi, String musteriSoyadi, 
-			int musteriTcKimlikNo, short yas) {
+			long musteriTcKimlikNo, short yas) {
 		m.bilgileriKaydet(musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
 	}
 
@@ -172,7 +172,9 @@ public class Otel {
 	}
 
 	public Resepsiyonist resepsiyonistYarat() {
-		Resepsiyonist _resepsiyonist = new Resepsiyonist();
+		Resepsiyonist _resepsiyonist;
+		_resepsiyonist = new Resepsiyonist();
+		
 		resepsiyonistListesi.add(_resepsiyonist);
 		return _resepsiyonist;
 	}
