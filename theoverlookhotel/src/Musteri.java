@@ -17,7 +17,7 @@ public class Musteri {
 	}
 	
 	public Musteri() {
-		// TODO Auto-generated constructor stub
+		this.musteriTipi = new MusteriTipi("Standart");
 	}
 	
 	public boolean uygunlukGetir(){

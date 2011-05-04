@@ -12,7 +12,8 @@ public class Oda {
 	}
 	
 	public Oda() {
-		// TODO Auto-generated constructor stub
+		this.uygunluk = true;
+		this.bosOlma = true;
 	}
 	
 	public int odaIDGetir() {

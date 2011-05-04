@@ -30,8 +30,8 @@ public class Sistem {
 		return this.aktifOtel.kataloglariGetir();
 	}
 	
-	public void katalogSec(OdaKatalogu katalog,Oda oda){
-		this.aktifOtel.katalogSec(katalog,oda);
+	public void katalogSec(int _katalogID,Oda oda){
+		this.aktifOtel.katalogSec(_katalogID,oda);
 	}
 	
 	public void uygunOdaSec(int odaID) {
@@ -262,6 +262,13 @@ public class Sistem {
 							in.nextLine();
 						}
 						
+						else if (gelenInt == 4){
+							for (Oda i: sistem.aktifOtelGetir().odaListesiGetir())
+								System.out.println("OdaID:" + i.odaIDGetir());
+							
+							in.nextLine();
+						}
+						
 					}
 				}
 				
@@ -278,7 +285,52 @@ public class Sistem {
 						gelenInt = in.nextInt();
 						// FIXME:
 						in.nextLine();
-						if (gelenInt == 6){
+						
+						if (gelenInt == 1){
+							
+							Musteri __musteri = sistem.musteriKaydiIsleminiBaslat();
+							
+							System.out.println("İsim giriniz: ");
+							String __isim = in.nextLine();
+							System.out.println("Soyisim giriniz: ");
+							String __soyisim = in.nextLine();
+							System.out.println("Tc Kimlik NO giriniz: ");
+							long __id = in.nextLong();
+							System.out.println("Yaş giriniz: ");
+							short __yas = in.nextShort();
+							sistem.musteriKayitBilgileriniGonder(__musteri, __isim, __soyisim, __id, __yas);
+						}
+						
+						else if (gelenInt == 2){
+							for (Musteri i: sistem.aktifOtelGetir().musteriListesiGetir()){
+								System.out.println("| İsim: " + i.adGetir() + "| Soyisim: " + i.soyadGetir() 
+										+ "| Tc Kimlik: " + i.tcKimlikNoGetir() + "| Yaş: " + i.yasGetir() + " |");
+							}
+							
+							in.nextLine();
+						}
+						
+						else if (gelenInt == 4){
+							for (Oda i: sistem.aktifOtelGetir().odaListesiGetir())
+								System.out.println("OdaID:" + i.odaIDGetir());
+							
+							in.nextLine();
+						}
+						
+						else if (gelenInt == 5){
+							Oda _oda = sistem.odaEklemeIsleminiBaslat();
+							for (OdaKatalogu i: sistem.aktifOtelGetir().kataloglariGetir()){
+								System.out.println(i.katalogIDGetir()+": "+ i.isimGetir());	
+							}
+							System.out.println("\nKatalog ID seçiniz: ");
+							int __katalogID = in.nextInt();
+							sistem.aktifOtelGetir().katalogSec(__katalogID, _oda);
+							
+							System.out.println("Oda No giriniz: ");
+							int __odaNo = in.nextInt();
+							sistem.odaOzellikleriBelirt(_oda, __odaNo);
+						}
+						else if (gelenInt == 6){
 							Resepsiyonist __resepsiyonist = sistem.resepsiyonistEklemeIsleminiBaslat();
 							System.out.println("İsim giriniz: ");
 							String __isim = in.nextLine();

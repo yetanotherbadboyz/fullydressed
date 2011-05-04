@@ -65,11 +65,26 @@ public class Otel {
 		resepsiyonistListesi = new ArrayList<Resepsiyonist>();
 		musteriListesi = new ArrayList<Musteri>();
 		katalogListesi = new ArrayList<OdaKatalogu>();
+		OdaKatalogu katalog1 = new OdaKatalogu("standart", 1);
+		this.katalogEkle(katalog1);
+		OdaKatalogu katalog2 = new OdaKatalogu("vip", 2);
+		this.katalogEkle(katalog2);
+		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3);
+		this.katalogEkle(katalog3);
 		
 	}
 	
 	public Otel() {
-		// TODO Auto-generated constructor stub
+		odaListesi = new ArrayList<Oda>();
+		resepsiyonistListesi = new ArrayList<Resepsiyonist>();
+		musteriListesi = new ArrayList<Musteri>();
+		katalogListesi = new ArrayList<OdaKatalogu>();
+		OdaKatalogu katalog1 = new OdaKatalogu("standart", 1);
+		this.katalogEkle(katalog1);
+		OdaKatalogu katalog2 = new OdaKatalogu("vip", 2);
+		this.katalogEkle(katalog2);
+		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3);
+		this.katalogEkle(katalog3);
 	}
 	
 	public int resepsiyonistEkle(String _isim, String _soyisim){
@@ -100,12 +115,6 @@ public class Otel {
 	
 	public void katalogEkle(OdaKatalogu katalog){
 		katalogListesi.add(katalog);
-	}
-	
-	public int odaEkle(){
-		Oda _oda = new Oda(odaListesi.size());
-		odaListesi.add(_oda);
-		return _oda.odaIDGetir();
 	}
 	
 	public boolean odaSil(int _odaID){
@@ -174,7 +183,9 @@ public class Otel {
 	}
 
 	public Oda odaYarat() {
-		return odaGetir(odaEkle());
+		Oda _oda = new Oda();
+		odaListesi.add(_oda);
+		return _oda;
 	}
 
 	public Resepsiyonist resepsiyonistYarat() {
@@ -214,7 +225,17 @@ public class Otel {
 		return this.katalogListesi;
 	}
 	
-	public void katalogSec(OdaKatalogu katalog, Oda oda) {
+	public OdaKatalogu katalogGetir(int _katalogID){
+		for (OdaKatalogu i: this.kataloglariGetir()){
+			if (i.katalogIDGetir() == _katalogID)
+				return i;
+		}
+		return null;
+	}
+	
+	public void katalogSec(int __katalogID, Oda oda) {
+		
+		OdaKatalogu katalog = katalogGetir(__katalogID); 
 		oda.katalogSec(katalog);
 	}
 }
