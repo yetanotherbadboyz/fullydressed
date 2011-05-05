@@ -252,4 +252,12 @@ public class Otel {
 		OdaKatalogu katalog = katalogGetir(__katalogID); 
 		oda.katalogSec(katalog);
 	}
+
+	public Object resepsiyonistGetir(int __id) {
+		for (Resepsiyonist i: this.getReceptionistList()){
+			if (i.resepsiyonistIDGetir() == __id)
+				return i;
+		}
+		return null;
+	}
 }
