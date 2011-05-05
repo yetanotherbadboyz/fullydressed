@@ -299,8 +299,8 @@ public class Sistem {
 	
 	public boolean menuMusteriListesi(Sistem sistem){
 		for (Musteri i: sistem.aktifOtelGetir().musteriListesiGetir()){
-			System.out.println("| İsim: " + i.adGetir() + "| Soyisim: " + i.soyadGetir() 
-					+ "| Tc Kimlik: " + i.tcKimlikNoGetir() + "| Yaş: " + i.yasGetir() + " |");
+			System.out.println(" | İsim: " + i.adGetir() + " | Soyisim: " + i.soyadGetir() 
+					+ " | Tc Kimlik: " + i.tcKimlikNoGetir() + " | Yaş: " + i.yasGetir() + " |");
 		}
 		
 		in.nextLine();
@@ -357,11 +357,11 @@ public class Sistem {
 	
 	public boolean menuKiralamaListeleme(Sistem sistem){
 		for (Kiralama i: sistem.aktifOtelGetir().kiralamaListesiGetir())
-			System.out.println("Oda: " + i.getKiralananOda().odaIDGetir() + "|Ad: " + 
-					i.getKiralayanMusteri().adGetir() + "|Giris:" + i.baslangicTarihiGetir().YEAR + ":" 
-					+ i.baslangicTarihiGetir().MONTH + ":" + i.baslangicTarihiGetir().DAY_OF_MONTH +
-					"|Cikis" + i.getBitisTarihi().YEAR + ":" + i.getBitisTarihi().MONTH + ":" +
-					i.getBitisTarihi().DAY_OF_MONTH + "Fiyat: " + i.getFiyat());
+			System.out.println("Oda: " + i.getKiralananOda().odaIDGetir() + " | Ad: " + 
+					i.getKiralayanMusteri().adGetir() + " | Giris:" + i.baslangicTarihiGetir().get(GregorianCalendar.YEAR) + "/" 
+					+ i.baslangicTarihiGetir().get(GregorianCalendar.MONTH) + "/" + i.baslangicTarihiGetir().get(GregorianCalendar.DAY_OF_MONTH) +
+					" | Cikis:" + i.getBitisTarihi().get(GregorianCalendar.YEAR) + "/" + i.getBitisTarihi().get(GregorianCalendar.MONTH) + "/" +
+					i.getBitisTarihi().get(GregorianCalendar.DAY_OF_MONTH) + " | Kalınan gün sayısı : "+i.gunSayisiniGetir()+" | Günlük Fiyat : "+i.getKiralananOda().tutarOgren() + "| Fiyat: " + i.getFiyat() );
 		in.nextLine();
 		in.nextLine();
 		

@@ -31,6 +31,7 @@ public class Kiralama {
 	public void kiralamaTarihiSec(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi){
 		this.baslangicTarihi = _baslangicTarihi;
 		this.bitisTarihi = _bitisTarihi;
+		this.tutarAyarla();
 	}
 	
 	public boolean uygunMu() {
@@ -76,9 +77,15 @@ public class Kiralama {
 		this.setKiralananOda(_oda);
 		
 	}
+	
+	public void tutarAyarla() {
+		float gunlukFiyat = this.kiralananOda.tutarOgren();
+		int gunSayisi = this.gunSayisiniGetir();
+		this.setFiyat(gunlukFiyat*gunSayisi);
+	}
 
 	public float tutarOgren() {
-		return this.kiralananOda.tutarOgren();
+		return this.getFiyat();
 	}
 	
 	public boolean sonlandiMi(){
@@ -88,4 +95,20 @@ public class Kiralama {
 	public void sonlandir(){
 		this.sonlanma = true;
 	}
+
+    public int gunSayisiniGetir() {
+    	GregorianCalendar start = new GregorianCalendar();
+    	start.setTime(baslangicTarihi.getTime());
+    	GregorianCalendar end = new GregorianCalendar();
+    	end.setTime(bitisTarihi.getTime());
+    	GregorianCalendar current = start;
+    	int numWorkingDays = 0;
+
+    	while (current.before(end)) {
+    	            numWorkingDays++;
+    	            current.add(GregorianCalendar.DATE, 1);
+    	        }
+
+    	        return numWorkingDays;
+    	    }
 }
