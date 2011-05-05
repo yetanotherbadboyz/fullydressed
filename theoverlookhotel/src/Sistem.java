@@ -90,8 +90,9 @@ public class Sistem {
 		System.out.println("-----TheOverLookHotel Systems-----\n" +
 				"\n1. Otele giriş." +
 				"\n2. Otel yarat." +
+				"\n3. Otel listele." +
 				"\n0. Çıkış." +
-				"\n-----------TheOverLookHotel Systems---------Seçiminiz: ");
+				"\n-----------TheOverLookHotel Systems---------\nSeçiminiz: ");
 	}
 	
 	public void otelYazdir() {
@@ -99,7 +100,8 @@ public class Sistem {
 				"-------"+aktifOtel.adresGetir()+"-------\n" +
 				"\n1. Sistem'e Resepsiyonist olarak giriş yap. " +
 				"\n2. Sistem'e Yönetici olarak giriş yap." +
-				"\n\n\n0. Çıkış." +
+				"\n\n\n9. Sistem Menüye geri dön." +
+				"\n0. Çıkış." +
 				"\n\n-------"+aktifOtel.isimGetir()+"-------\nSeçiminiz: ");
 	}
 	
@@ -206,6 +208,18 @@ public class Sistem {
 		this.kiralama = _kiralama;
 	}
 	
+	public boolean menuOtelListele(Sistem sistem){
+		for (Otel i: sistem.otelListesi){
+			System.out.println("\nOtel Adı: " + i.isimGetir() 
+					+ "\nOtel Adresi: " + i.adresGetir() 
+					+ "\nOtel ID: " + i.otelIDGetir());
+		}
+		in.nextLine();
+		in.nextLine();
+		
+		return true;
+	}
+	
 	public boolean menuOtelSec(Sistem sistem){
 		
 		System.out.println("Otel ID giriniz: ");
@@ -224,6 +238,7 @@ public class Sistem {
 	}
 	
 	public boolean menuOtelYarat(Sistem sistem){
+		in.nextLine();
 		Otel _otel = sistem.otelEklemeIsleminiBaslat();
 		System.out.println("Otel Adı giriniz: ");
 		String __ad = in.nextLine();
@@ -391,6 +406,11 @@ public class Sistem {
 		String __soyisim = in.nextLine();
 		System.out.println("ID giriniz: ");
 		int __id = in.nextInt();
+		
+		while (sistem.aktifOtelGetir().resepsiyonistGetir(__id) != null){
+			System.err.println("Aynı ID'ye sahip resepsiyonist var. Başka bir tane giriniz: ");
+			__id = in.nextInt();
+		}
 		sistem.resepsiyonistOzellikleriniGir(__resepsiyonist, __isim, __soyisim, __id);
 		return true;
 	}
@@ -399,6 +419,7 @@ public class Sistem {
 		for (Resepsiyonist i: sistem.aktifOtelGetir().getReceptionistList())
 			System.out.println("Resepsiyonist Adı: " + i.isimGetir() + " Soyadi: " + i.soyisimGetir() +
 					" ID: " + i.resepsiyonistIDGetir());
+		in.nextLine();
 		in.nextLine();
 		
 		return true;
@@ -428,7 +449,7 @@ public class Sistem {
 		
 		varsayilanOtel.kiralamaSonlandir(varsayilanKiralama);
 		
-		sistem.otelListesi.add(varsayilanOtel);
+//		sistem.otelListesi.add(varsayilanOtel);
 	    
 		/* Varsayılan Sınıflar */
 	
@@ -450,8 +471,15 @@ public class Sistem {
 				if (!sistem.menuOtelYarat(sistem));
 					continue;
 			}
-			else 
+			
+			else if (gelenInt == 3){
+				if (!sistem.menuOtelListele(sistem));
 				continue;
+			}
+			else {
+				System.err.println("Yanlış seçim.");
+				continue;
+			}
 			
 			
 			while (gelenInt != 9 && gelenInt != 0){
@@ -582,6 +610,10 @@ public class Sistem {
 						}
 					}
 				}
+				
+				else if (gelenInt == 9)
+					break;
+				
 				else if (gelenInt == 0)
 					System.exit(0);
 				
