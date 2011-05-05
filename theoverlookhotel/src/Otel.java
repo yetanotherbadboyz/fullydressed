@@ -4,8 +4,8 @@ import java.util.List;
 
 
 public class Otel {
-	private String isim;
-	private String adres;
+	private String isim = "";
+	private String adres = "";
 	private List<Oda> odaListesi;
 	private List<Resepsiyonist> resepsiyonistListesi;
 	private List<Musteri> musteriListesi;
