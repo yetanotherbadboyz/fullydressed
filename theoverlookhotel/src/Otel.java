@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Otel {
 	private String isim;
+	private String adres;
 	private List<Oda> odaListesi;
 	private List<Resepsiyonist> resepsiyonistListesi;
 	private List<Musteri> musteriListesi;
@@ -160,6 +161,14 @@ public class Otel {
 		return _innerList;
 	}
 	
+	public String adresGetir() {
+		return this.adres;
+	}
+	
+	public void adresAyarla(String _adres){
+		this.adres = _adres;
+	}
+	
 	public String isimGetir() {
 		return isim;
 	}
@@ -199,9 +208,10 @@ public class Otel {
 		return _resepsiyonist;
 	}
 
-	public void otelOzellikleriniGir(String _otelAdi, int _otelID) {
+	public void otelOzellikleriniGir(String _otelAdi, String __adres, int _otelID) {
 		isimAyarla(_otelAdi);
 		otelIDAyarla(_otelID);
+		adresAyarla(__adres);
 	}
 
 	public void uygunOdaSec(int odaID, Kiralama kiralama) {

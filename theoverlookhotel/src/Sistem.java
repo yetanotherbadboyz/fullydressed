@@ -72,8 +72,8 @@ public class Sistem {
 		return _otel;
 	}
 	
-	public void otelOzellikleriniGir(Otel _otel, String otelAdi, int otelID) {
-		_otel.otelOzellikleriniGir(otelAdi, otelID);
+	public void otelOzellikleriniGir(Otel _otel, String otelAdi, String __adres, int otelID) {
+		_otel.otelOzellikleriniGir(otelAdi, __adres, otelID);
 	}
 	
 	public Resepsiyonist resepsiyonistEklemeIsleminiBaslat() {
@@ -211,9 +211,11 @@ public class Sistem {
 		Otel _otel = sistem.otelEklemeIsleminiBaslat();
 		System.out.println("Otel Adı giriniz: ");
 		String __ad = in.nextLine();
+		System.out.println("Odel Adresi giriniz: ");
+		String __adres = in.nextLine();
 		System.out.println("Otel ID giriniz: ");
 		int __id = in.nextInt();
-		sistem.otelOzellikleriniGir(_otel, __ad, __id);
+		sistem.otelOzellikleriniGir(_otel, __ad, __adres, __id);
 		return true;
 	}
 	
