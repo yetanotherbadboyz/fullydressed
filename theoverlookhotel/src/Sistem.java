@@ -348,6 +348,10 @@ public class Sistem {
 		
 		System.out.println("Oda No giriniz: ");
 		int __odaNo = in.nextInt();
+		while (sistem.aktifOtelGetir().odaGetir(__odaNo) != null){
+			System.err.println("Oda Mevcut, başka Oda No giriniz: ");
+			__odaNo = in.nextInt();
+		}
 		sistem.odaOzellikleriBelirt(_oda, __odaNo);
 		
 		return true;
