@@ -3,9 +3,6 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.sound.midi.SysexMessage;
-
-
 public class Sistem {
 	private List<Otel> otelListesi = new ArrayList<Otel>();
 	private Otel aktifOtel;
@@ -172,9 +169,22 @@ public class Sistem {
 		return null;
 	}
 	
+	public boolean strKarsilastir(String ilk, String ikinci){
+		if (ilk.length() != ikinci.length())
+			return false;
+		
+		for (int i=0;i<ilk.length();i++){
+			if (ilk.charAt(i) != ikinci.charAt(i))
+				return false;
+		}
+		
+		return true;
+		
+	}
+	
 	public Otel otelGetirIsim(String isim){
 		for (Otel i: otelListesi){
-			if (i.isimGetir() == isim)
+			if (strKarsilastir(i.isimGetir(), isim))
 				return i;
 		}
 		return null;
@@ -182,7 +192,7 @@ public class Sistem {
 	
 	public Otel otelGetirAdres(String adres){
 		for (Otel i: otelListesi){
-			if (i.adresGetir() == adres)
+			if (strKarsilastir(i.adresGetir(), adres))
 				return i;
 		}
 		return null;
@@ -254,6 +264,11 @@ public class Sistem {
 		}
 		System.out.println("Otel ID giriniz: ");
 		int __id = in.nextInt();
+		
+		while (sistem.otelGetirID(__id) != null){
+			System.err.println("Aynı ID'de kayıtlı otel adı var, başka bir tane giriniz: ");
+			__id = in.nextInt();
+		}
 		sistem.otelOzellikleriniGir(_otel, __ad, __adres, __id);
 		return true;
 	}
