@@ -459,8 +459,8 @@ public class Sistem {
 		
 		Kiralama varsayilanKiralama = new Kiralama(varsayilanMusteri);
 		varsayilanOtel.uygunOdaSec(237, varsayilanKiralama);
-		varsayilanOtel.kiralamaTarihiSec(new GregorianCalendar(237, 2, 3), 
-				new GregorianCalendar(237, 2, 7), varsayilanKiralama);
+		varsayilanOtel.kiralamaTarihiSec(new GregorianCalendar(2011, 2, 3), 
+				new GregorianCalendar(2011, 2, 7), varsayilanKiralama);
 		
 		varsayilanOtel.kiralamaSonlandir(varsayilanKiralama);
 		
