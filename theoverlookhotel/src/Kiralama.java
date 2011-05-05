@@ -6,7 +6,7 @@ public class Kiralama {
 	private GregorianCalendar bitisTarihi;
 	private Oda kiralananOda;
 	private Musteri kiralayanMusteri;
-	private int fiyat;
+	private float fiyat;
 	private boolean sonlanma;
 
 	public Kiralama(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi, Oda _kiralananOda, 
@@ -56,6 +56,7 @@ public class Kiralama {
 	}
 	public void setKiralananOda(Oda kiralananOda) {
 		this.kiralananOda = kiralananOda;
+		this.fiyat = this.kiralananOda.tutarOgren();
 	}
 	public Musteri getKiralayanMusteri() {
 		return kiralayanMusteri;
@@ -63,14 +64,15 @@ public class Kiralama {
 	public void setKiralayanMusteri(Musteri kiralayanMusteri) {
 		this.kiralayanMusteri = kiralayanMusteri;
 	}
-	public int getFiyat() {
+	public float getFiyat() {
 		return fiyat;
 	}
-	public void setFiyat(int fiyat) {
+	public void setFiyat(float fiyat) {
 		this.fiyat = fiyat;
 	}
 
 	public void odaSec(Oda _oda) {
+		_oda.bosOlmaDurumuAyarla(false);
 		this.setKiralananOda(_oda);
 		
 	}

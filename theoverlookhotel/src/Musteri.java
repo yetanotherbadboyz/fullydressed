@@ -17,6 +17,7 @@ public class Musteri {
 	}
 	
 	public Musteri() {
+		this.uygunluk = true;
 		this.musteriTipi = new MusteriTipi("Standart");
 	}
 	

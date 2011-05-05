@@ -145,7 +145,7 @@ public class Otel {
 	public List<Oda> uygunOdalariGetir(Musteri musteri){
 		List<Oda> _innerList = new ArrayList<Oda>();
 		for (Oda i: odaListesi){
-			if (i.uygunMu(musteri))
+			if (i.uygunMu(musteri) && i.bosMu())
 				_innerList.add(i);
 		}
 		return _innerList;
