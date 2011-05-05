@@ -242,10 +242,14 @@ public class Sistem {
 		String __soyisim = in.nextLine();
 		System.out.println("Tc Kimlik NO giriniz: ");
 		long __id = in.nextLong();
-		if (__id == 0)
+		if (__id == 0){
+			System.err.println("Tc Kimlik No yanlış.");
 			return false;
-		if (sistem.aktifOtelGetir().musteriGetir(__id) != null)
+		}
+		if (sistem.aktifOtelGetir().musteriGetir(__id) != null){
+			System.err.println("Aynı Tc Kimlik No'ya sahip kayıtlı müşteri var.");
 			return false;
+		}
 		System.out.println("Yaş giriniz: ");
 		short __yas = in.nextShort();
 		sistem.musteriKayitBilgileriniGonder(__musteri, __isim, __soyisim, __id, __yas);
