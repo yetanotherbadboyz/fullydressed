@@ -96,6 +96,7 @@ public class Sistem {
 	
 	public void otelYazdir() {
 		System.out.println("-------"+aktifOtel.isimGetir()+"-------\n" +
+				"-------"+aktifOtel.adresGetir()+"-------\n" +
 				"\n1. Sistem'e Resepsiyonist olarak giriş yap. " +
 				"\n2. Sistem'e Yönetici olarak giriş yap." +
 				"\n\n\n0. Çıkış." +
@@ -161,9 +162,25 @@ public class Sistem {
 		return this.aktifOtel;
 	}
 	
-	public Otel otelGetir(int id){
+	public Otel otelGetirID(int id){
 		for (Otel i: otelListesi){
 			if (i.otelIDGetir() == id)
+				return i;
+		}
+		return null;
+	}
+	
+	public Otel otelGetirIsim(String isim){
+		for (Otel i: otelListesi){
+			if (i.isimGetir() == isim)
+				return i;
+		}
+		return null;
+	}
+	
+	public Otel otelGetirAdres(String adres){
+		for (Otel i: otelListesi){
+			if (i.adresGetir() == adres)
 				return i;
 		}
 		return null;
@@ -201,18 +218,25 @@ public class Sistem {
 		}
 		 
 		else {
-			sistem.aktifOtelAyarla(sistem.otelGetir(gelenID));
+			sistem.aktifOtelAyarla(sistem.otelGetirID(gelenID));
 			return true;
 		}
 	}
 	
 	public boolean menuOtelYarat(Sistem sistem){
-		in.nextLine();
 		Otel _otel = sistem.otelEklemeIsleminiBaslat();
 		System.out.println("Otel Adı giriniz: ");
 		String __ad = in.nextLine();
+		while (sistem.otelGetirIsim(__ad) != null){
+			System.err.println("Aynı isimde kayıtlı otel adı var, başka bir tane giriniz: ");
+			__ad = in.nextLine();
+		}
 		System.out.println("Odel Adresi giriniz: ");
 		String __adres = in.nextLine();
+		while (sistem.otelGetirAdres(__adres) != null){
+			System.err.println("Aynı adreste kayıtlı otel adı var, başka bir tane giriniz: ");
+			__adres = in.nextLine();
+		}
 		System.out.println("Otel ID giriniz: ");
 		int __id = in.nextInt();
 		sistem.otelOzellikleriniGir(_otel, __ad, __adres, __id);
@@ -386,6 +410,7 @@ public class Sistem {
 		/* Varsayılan Sınıflar */
 		Otel varsayilanOtel = new Otel("The Overlook Hotel");
 		varsayilanOtel.otelIDAyarla(237);
+		varsayilanOtel.adresAyarla("The Overlook Hotel");
 		
 		Resepsiyonist varsayilanResepsiyonist = varsayilanOtel.resepsiyonistYarat();
 		varsayilanResepsiyonist.resepsiyonistOzellikleriniGir("Jack", "Torrance", 237);
