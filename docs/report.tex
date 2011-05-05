@@ -798,10 +798,16 @@ müşteriye anahtar veri aracılığı ile ulaşmayı istemektedir.
     \item Eşsiz bir otel ismi girilene kadar 2a devam eder.
     \item İşleme kalınan yerden devam edilir.
     \end{enumerate}
-\item[2b.]
+\item[2b.] Aynı adresli başka bir otel varsa
     \begin{enumerate}
     \item Sistem yeni bir adres girilesini ister.
-    \item Eşsiz bir adres girilene kadar 2a devam eder.
+    \item Eşsiz bir adres girilene kadar 2b devam eder.
+    \item İşleme kalınan yerden devam edilir.
+    \end{enumerate}
+\item[2c.] Aynı ID'li başka bir otel varsa
+    \begin{enumerate}
+    \item Sistem yeni bir ID girilesini ister.
+    \item Eşsiz bir ID girilene kadar 2c devam eder.
     \item İşleme kalınan yerden devam edilir.
     \end{enumerate}
 \end{itemize}
