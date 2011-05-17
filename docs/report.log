@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  5 MAY 2011 12:52
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2011/dev/Pardus) (format=pdflatex 2011.4.17)  18 MAY 2011 00:22
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -503,11 +503,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
-[11] <dia/eventdiagram-usecase1.png, id=46, 115.18031pt x 510.40688pt>
+[11] <dia/eventdiagram-usecase1.png, id=46, 114.4275pt x 714.41907pt>
 File: dia/eventdiagram-usecase1.png Graphic file (type png)
 
-<use dia/eventdiagram-usecase1.png> [12 <./dia/eventdiagram-usecase1.png (PNG c
-opy)>] [13]
+<use dia/eventdiagram-usecase1.png>
+Overfull \vbox (43.91046pt too high) has occurred while \output is active []
+
+
+[12 <./dia/eventdiagram-usecase1.png (PNG copy)>] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
@@ -534,7 +537,7 @@ Overfull \vbox (35.12766pt too high) has occurred while \output is active []
 
 
 [18 <./dia/ssd-usecase2.png (PNG copy)>]
-<dia/eventdiagram-usecase2.png, id=71, 511.15968pt x 706.13812pt>
+<dia/eventdiagram-usecase2.png, id=71, 511.15968pt x 735.49782pt>
 File: dia/eventdiagram-usecase2.png Graphic file (type png)
 
 <use dia/eventdiagram-usecase2.png>
@@ -543,7 +546,7 @@ Overfull \hbox (58.19052pt too wide) in paragraph at lines 553--554
  []
 
 [19]
-Overfull \vbox (35.62953pt too high) has occurred while \output is active []
+Overfull \vbox (64.98917pt too high) has occurred while \output is active []
 
 
 [20 <./dia/eventdiagram-usecase2.png (PNG copy)>]
@@ -611,7 +614,7 @@ Overfull \hbox (14.77844pt too wide) in paragraph at lines 691--692
  []
 
 [26 <./dia/ssd-usecase3.png (PNG copy)>]
-<dia/eventdiagram-usecase3.png, id=100, 265.74281pt x 513.41812pt>
+<dia/eventdiagram-usecase3.png, id=100, 265.74281pt x 607.51968pt>
 File: dia/eventdiagram-usecase3.png Graphic file (type png)
 
 <use dia/eventdiagram-usecase3.png> [27 <./dia/eventdiagram-usecase3.png (PNG c
@@ -658,7 +661,7 @@ Overfull \hbox (14.77844pt too wide) in paragraph at lines 823--824
  []
 
 [33 <./dia/ssd-usecase4.png (PNG copy)>]
-<dia/eventdiagram-usecase4.png, id=125, 109.1578pt x 369.63094pt>
+<dia/eventdiagram-usecase4.png, id=125, 109.1578pt x 567.62062pt>
 File: dia/eventdiagram-usecase4.png Graphic file (type png)
 
 <use dia/eventdiagram-usecase4.png> [34 <./dia/eventdiagram-usecase4.png (PNG c
@@ -700,7 +703,7 @@ Overfull \hbox (14.77844pt too wide) in paragraph at lines 924--925
  []
 
 [39 <./dia/ssd-usecase5.png (PNG copy)>]
-<dia/eventdiagram-usecase5.png, id=147, 111.41624pt x 628.59843pt>
+<dia/eventdiagram-usecase5.png, id=147, 208.52907pt x 628.59843pt>
 File: dia/eventdiagram-usecase5.png Graphic file (type png)
 
 <use dia/eventdiagram-usecase5.png> [40 <./dia/eventdiagram-usecase5.png (PNG c
@@ -755,7 +758,7 @@ Here is how much of TeX's memory you used:
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (43 pages, 494746 bytes).
+Output written on report.pdf (43 pages, 516911 bytes).
 PDF statistics:
  180 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams
