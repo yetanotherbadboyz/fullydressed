@@ -1,20 +1,23 @@
+package UnitTypes;
+
 import java.util.GregorianCalendar;
 
 public class Kiralama {
+	private int ID;
 	private boolean uygunluk;
 	private GregorianCalendar baslangicTarihi;
 	private GregorianCalendar bitisTarihi;
-	private Oda kiralananOda;
-	private Musteri kiralayanMusteri;
+	private int kiralananOdaID;
+	private int kiralayanMusteriID;
 	private float fiyat;
 	private boolean sonlanma;
 
-	public Kiralama(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi, Oda _kiralananOda, 
-			Musteri _kiralayanMusteri) {
+	public Kiralama(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi, int _kiralananOdaID, 
+			int _kiralayanMusteriID) {
 		this.baslangicTarihi = _baslangicTarihi;
 		this.bitisTarihi = _bitisTarihi;
-		this.kiralananOda = _kiralananOda;
-		this.kiralayanMusteri = _kiralayanMusteri;
+		this.kiralananOdaID = _kiralananOdaID;
+		this.kiralayanMusteriID = _kiralayanMusteriID;
 		this.uygunluk = true;
 		this.sonlanma = false;
 		
@@ -23,9 +26,18 @@ public class Kiralama {
 	public Kiralama() {
 		// TODO Auto-generated constructor stub
 	}
+
 	
-	public Kiralama(Musteri musteri) {
-		this.kiralayanMusteri = musteri;
+	public Kiralama(Musteri musteriID) {
+		this.kiralayanMusteri = musteriID;
+	}
+
+	public void setID(int ID){
+		this.ID = ID;
+	}
+	
+	public int getID(){
+		return this.ID;
 	}
 
 	public void kiralamaTarihiSec(GregorianCalendar _baslangicTarihi, GregorianCalendar _bitisTarihi){

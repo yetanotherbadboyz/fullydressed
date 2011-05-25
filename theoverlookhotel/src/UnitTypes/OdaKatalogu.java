@@ -1,8 +1,10 @@
+package UnitTypes;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class OdaKatalogu {
+	private int ID;
 	private String katalogAdi;
 	private int katalogID;
 	private float tutar;
@@ -16,6 +18,14 @@ public class OdaKatalogu {
 		musteriTipleri.add(_musteriTipi1);
 		MusteriTipi _musteriTipi2 = new MusteriTipi("VIP");
 		musteriTipleri.add(_musteriTipi2);
+	}
+	
+	public void setID(int ID){
+		this.ID = ID;
+	}
+	
+	public int getID(){
+		return this.ID;
 	}
 
 	public int katalogIDGetir() {

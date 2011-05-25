@@ -1,9 +1,12 @@
+package UnitTypes;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
 
+
 public class Otel {
+	private int ID;
 	private String isim = "";
 	private String adres = "";
 	private List<Oda> odaListesi;
@@ -16,6 +19,14 @@ public class Otel {
 	
 	public List<Musteri> musteriListesiGetir() {
 		return musteriListesi;
+	}
+	
+	public void setID(int ID){
+		this.ID = ID;
+	}
+	
+	public int getID(){
+		return this.ID;
 	}
 
 	public void musteriListesiAyarla(List<Musteri> musteriListesi) {

@@ -1,5 +1,7 @@
+package UnitTypes;
 
 public class Oda {
+	private int ID;
 	private int odaID;
 	private boolean uygunluk;
 	private boolean bosOlma;
@@ -14,6 +16,14 @@ public class Oda {
 	public Oda() {
 		this.uygunluk = true;
 		this.bosOlma = true;
+	}
+
+	public void setID(int ID){
+		this.ID = ID;
+	}
+	
+	public int getID(){
+		return this.ID;
 	}
 	
 	public int odaIDGetir() {

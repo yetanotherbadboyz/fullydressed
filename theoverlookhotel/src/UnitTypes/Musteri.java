@@ -1,5 +1,7 @@
+package UnitTypes;
 
 public class Musteri {
+	private int ID;
 	private String adi;
 	private String soyadi;
 	private long tcKimlikNo;
@@ -19,6 +21,14 @@ public class Musteri {
 	public Musteri() {
 		this.uygunluk = true;
 		this.musteriTipi = new MusteriTipi("Standart");
+	}
+
+	public void setID(int ID){
+		this.ID = ID;
+	}
+	
+	public int getID(){
+		return this.ID;
 	}
 	
 	public boolean uygunlukGetir(){

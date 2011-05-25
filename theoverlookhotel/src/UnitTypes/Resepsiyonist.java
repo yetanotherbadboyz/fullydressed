@@ -1,5 +1,7 @@
+package UnitTypes;
 
 public class Resepsiyonist {
+	private int ID;
 	private String isim;
 	private String soyisim;
 	private int resepsiyonistID;
@@ -16,7 +18,13 @@ public class Resepsiyonist {
 	public Resepsiyonist() {
 		super();
 	}
+	public void setID(int ID){
+		this.ID = ID;
+	}
 	
+	public int getID(){
+		return this.ID;
+	}
 	public String isimGetir() {
 		return isim;
 	}
