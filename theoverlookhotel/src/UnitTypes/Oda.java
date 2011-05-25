@@ -1,11 +1,13 @@
 package UnitTypes;
 
+import DatabasePackage.Facade;
+
 public class Oda {
 	private int ID;
 	private int odaID;
 	private boolean uygunluk;
 	private boolean bosOlma;
-	private OdaKatalogu odaKatalogu;
+	private int odaKataloguID;
 	
 	public Oda(int _odaID) {
 		this.odaID = _odaID;
@@ -35,15 +37,16 @@ public class Oda {
 	public boolean isAvailable() {
 		return uygunluk;
 	}
-	public void odaKataloguAyarla(OdaKatalogu odaKatalogu){
-		this.odaKatalogu = odaKatalogu;
+	public void odaKataloguAyarla(int odaKataloguID){
+		this.odaKataloguID = odaKataloguID;
 	}
 	
 	public boolean uygunMu(Musteri musteri) {
 		if (!this.isAvailable()){
 			return false;
 		}
-		return this.odaKatalogu.uygunMu(musteri);
+		OdaKatalogu katalog = (OdaKatalogu) Facade.getInstance().get(this.odaKataloguID, OdaKatalogu.class);
+		return katalog.uygunMu(musteri);
 	}
 	public void uygunlukAyarla(boolean uygunluk) {
 		this.uygunluk = uygunluk;
@@ -60,8 +63,8 @@ public class Oda {
 		
 	}
 
-	public void katalogSec(OdaKatalogu katalog) {
-		this.odaKatalogu = katalog;
+	public void katalogSec(int katalogID) {
+		this.odaKataloguID = katalogID;
 		
 	}
 
