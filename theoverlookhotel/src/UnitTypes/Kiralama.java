@@ -2,6 +2,8 @@ package UnitTypes;
 
 import java.util.GregorianCalendar;
 
+import DatabasePackage.Facade;
+
 public class Kiralama {
 	private int ID;
 	private boolean uygunluk;
@@ -28,8 +30,8 @@ public class Kiralama {
 	}
 
 	
-	public Kiralama(Musteri musteriID) {
-		this.kiralayanMusteri = musteriID;
+	public Kiralama(int musteriID) {
+		this.kiralayanMusteriID = musteriID;
 	}
 
 	public void setID(int ID){
@@ -65,17 +67,17 @@ public class Kiralama {
 		this.bitisTarihi = bitisTarihi;
 	}
 	public Oda getKiralananOda() {
-		return kiralananOda;
+		return (Oda) Facade.getInstance().get(kiralananOdaID, Oda.class);
 	}
-	public void setKiralananOda(Oda kiralananOda) {
-		this.kiralananOda = kiralananOda;
-		this.fiyat = this.kiralananOda.tutarOgren();
+	public void setKiralananOda(int kiralananOdaID) {
+		this.kiralananOdaID = kiralananOdaID;
+		this.fiyat = ((Oda) Facade.getInstance().get(kiralananOdaID, Oda.class)).tutarOgren();
 	}
 	public Musteri getKiralayanMusteri() {
-		return kiralayanMusteri;
+		return (Musteri) Facade.getInstance().get(kiralayanMusteriID, Musteri.class);
 	}
-	public void setKiralayanMusteri(Musteri kiralayanMusteri) {
-		this.kiralayanMusteri = kiralayanMusteri;
+	public void setKiralayanMusteri(int kiralayanMusteriID) {
+		this.kiralayanMusteriID = kiralayanMusteriID;
 	}
 	public float getFiyat() {
 		return fiyat;
@@ -84,14 +86,15 @@ public class Kiralama {
 		this.fiyat = fiyat;
 	}
 
-	public void odaSec(Oda _oda) {
-		_oda.bosOlmaDurumuAyarla(false);
-		this.setKiralananOda(_oda);
+	public void odaSec(int _odaID) {
+		((Oda) Facade.getInstance().get(_odaID, Oda.class)).bosOlmaDurumuAyarla(false);
+		this.setKiralananOda(_odaID);
+
 		
 	}
 	
 	public void tutarAyarla() {
-		float gunlukFiyat = this.kiralananOda.tutarOgren();
+		float gunlukFiyat = ((Oda) Facade.getInstance().get(kiralananOdaID, Oda.class)).tutarOgren();
 		int gunSayisi = this.gunSayisiniGetir();
 		this.setFiyat(gunlukFiyat*gunSayisi);
 	}
