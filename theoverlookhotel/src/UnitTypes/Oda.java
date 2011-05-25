@@ -69,7 +69,8 @@ public class Oda {
 	}
 
 	public float tutarOgren() {
-		return this.odaKatalogu.tutarGetir();
+		OdaKatalogu katalog = (OdaKatalogu) Facade.getInstance().get(odaKataloguID, OdaKatalogu.class);
+		return katalog.tutarGetir();
 	}
 
 }
