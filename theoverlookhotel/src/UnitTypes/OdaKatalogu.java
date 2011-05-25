@@ -17,10 +17,8 @@ public class OdaKatalogu {
 		this.katalogID = _katalogID;
 		this.tutar = _tutar;
 		MusteriTipi _musteriTipi1 = new MusteriTipi("Standart");
-		Facade.getInstance().set(_musteriTipi1, MusteriTipi.class);
 		musteriTipleri.add(_musteriTipi1.getID());
 		MusteriTipi _musteriTipi2 = new MusteriTipi("VIP");
-		Facade.getInstance().set(_musteriTipi2, MusteriTipi.class);
 		musteriTipleri.add(_musteriTipi2.getID());
 	}
 	

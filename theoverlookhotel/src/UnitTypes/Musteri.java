@@ -19,7 +19,11 @@ public class Musteri {
 		this.uygunluk = true;
 		this.musteriTipiID = musteriTipiID;
 	}
-	
+
+	public Musteri() {
+		this.uygunluk = true;
+		this.musteriTipiID = (new MusteriTipi("Standart")).getID();
+	}
 
 	public void setID(int ID){
 		this.ID = ID;
