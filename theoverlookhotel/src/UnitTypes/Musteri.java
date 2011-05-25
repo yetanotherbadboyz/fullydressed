@@ -1,5 +1,7 @@
 package UnitTypes;
 
+import DatabasePackage.Facade;
+
 public class Musteri {
 	private int ID;
 	private String adi;
@@ -7,21 +9,17 @@ public class Musteri {
 	private long tcKimlikNo;
 	private short yas;
 	private boolean uygunluk;
-	private MusteriTipi musteriTipi;
+	private int musteriTipiID;
 	
-	public Musteri(String _adi, String _soyadi, long _tcKimlikNo, short _yas, MusteriTipi musteriTipi) {
+	public Musteri(String _adi, String _soyadi, long _tcKimlikNo, short _yas, int musteriTipiID) {
 		this.adi = _adi;
 		this.soyadi = _soyadi;
 		this.tcKimlikNo = _tcKimlikNo;
 		this.yas = _yas;
 		this.uygunluk = true;
-		this.musteriTipi = musteriTipi;
+		this.musteriTipiID = musteriTipiID;
 	}
 	
-	public Musteri() {
-		this.uygunluk = true;
-		this.musteriTipi = new MusteriTipi("Standart");
-	}
 
 	public void setID(int ID){
 		this.ID = ID;
@@ -64,8 +62,11 @@ public class Musteri {
 		this.yas = yas;
 	}
 	
+	public int getMusteriTipiID(){
+		return this.musteriTipiID;
+	}
 	public MusteriTipi musteriTipiGetir(){
-		return (this.musteriTipi);
+		return (MusteriTipi) Facade.getInstance().get(this.getMusteriTipiID(), MusteriTipi.class);
 	}
 	
 	public void bilgileriKaydet(String musteriAdi, String musteriSoyadi,
