@@ -453,7 +453,7 @@ public class Sistem {
 	
 	public static void main(String[] args) {
 		Sistem sistem = new Sistem();
-		/* Varsayılan Sınıflar */
+		/* Varsayılan Sınıflar */ /*
 		Otel varsayilanOtel = new Otel("The Overlook Hotel");
 		varsayilanOtel.otelIDAyarla(237);
 		varsayilanOtel.adresAyarla("The Overlook Hotel");
@@ -477,11 +477,9 @@ public class Sistem {
 		
 //		sistem.otelListesi.add(varsayilanOtel);
 	    
-		/* Varsayılan Sınıflar */
-	
+		/* Varsayılan Sınıflar 
 		
-		
-		sistem.otelListesi.add(varsayilanOtel.getID());
+		sistem.otelListesi.add(varsayilanOtel.getID());*/
 
 		Scanner in = new Scanner(System.in);
 		int gelenInt = -1;

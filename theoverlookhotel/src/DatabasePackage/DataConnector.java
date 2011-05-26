@@ -99,9 +99,4 @@ public class DataConnector {
 		return rowCount;
 	}
 	
-	public static void main(String[] args) {
-		DataConnector a = new DataConnector();
-		System.out.println(a.startConnection());
-	}
-	
 }

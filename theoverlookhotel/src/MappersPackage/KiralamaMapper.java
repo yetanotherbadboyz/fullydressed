@@ -24,4 +24,10 @@ public class KiralamaMapper implements IMapper {
 		return 0;
 	}
 
+	@Override
+	public int getAvailableID() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
