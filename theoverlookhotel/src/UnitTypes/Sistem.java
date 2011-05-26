@@ -21,9 +21,13 @@ public class Sistem {
 	
 	public void musteriKayitBilgileriniGonder(Musteri m, String musteriAdi, String musteriSoyadi, 
 			long __id, short yas) {
-		((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).musteriKayitBilgileriniGonder(m.getID(), musteriAdi, musteriSoyadi, __id, yas);
+		((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).musteriKayitBilgileriniGonder(m, musteriAdi, musteriSoyadi, __id, yas);
 	}
 	
+	public Kiralama getAktifKiralama(){
+		return (Kiralama) Facade.getInstance().get(aktifKiralamaID, Kiralama.class);
+		
+	}
 	public List<Oda> odaKiralamaIsleminiBaslat(long musteriTcKimlikNo) {
 		Musteri musteri = ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).musteriGetir(musteriTcKimlikNo);
 		this.aktifKiralamaID = new Kiralama(musteri.getID()).getID();
@@ -31,7 +35,7 @@ public class Sistem {
 
 	}
 	
-	public List<Integer> kataloglariGetir(){
+	public List<OdaKatalogu> kataloglariGetir(){
 		return ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).kataloglariGetir();
 	}
 	
@@ -40,21 +44,23 @@ public class Sistem {
 	}
 	
 	public void uygunOdaSec(int odaID) {
-		((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).uygunOdaSec(odaID, aktifKiralamaID);
+		
+		((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).uygunOdaSec(odaID,
+				(Kiralama) Facade.getInstance().get(this.aktifKiralamaID, Kiralama.class));
 	}
 	
 	public float kiralamaTarihiSec(int girisGun, int girisAy, int girisYil,
 								int cikisGun, int cikisAy, int cikisYil) {
 
 		float tutar = ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).kiralamaTarihiSec(new GregorianCalendar(girisYil, girisAy, girisGun), 
-				new GregorianCalendar(cikisYil, cikisAy, cikisGun), ((Kiralama) Facade.getInstance().get(aktifKiralamaID, Kiralama.class)));
+				new GregorianCalendar(cikisYil, cikisAy, cikisGun), getAktifKiralama());
 		return tutar;
 		
 
 	}
 	
 	public void kiralamaSonlandir() {
-		((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).kiralamaSonlandir(aktifKiralamaID);
+		((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).kiralamaSonlandir(getAktifKiralama());
 
 	}
 	
@@ -141,8 +147,8 @@ public class Sistem {
 	}
 	
 	public boolean resepsiyonistIDSorgula(int id){
-		for (Integer i: ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).getReceptionistList()){
-			if (((Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class)).resepsiyonistIDGetir() == id)
+		for (Resepsiyonist r: ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).getReceptionistList()){
+			if (r.resepsiyonistIDGetir() == id)
 				return true;
 		}
 		return false;
@@ -207,9 +213,9 @@ public class Sistem {
 	}
 	
 	public Resepsiyonist resepsiyonistGetir(int id){
-		for (Integer i: ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).getReceptionistList()){
-			if (((Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class)).resepsiyonistIDGetir() == id)
-				return ((Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class));
+		for (Resepsiyonist r: ((Otel) Facade.getInstance().get(aktifOtelID, Otel.class)).getReceptionistList()){
+			if (r.resepsiyonistIDGetir() == id)
+				return r;
 		}
 		return null;
 	}
@@ -375,12 +381,12 @@ public class Sistem {
 	}
 	
 	public boolean menuKiralamaListeleme(Sistem sistem){
-		for (Integer i: sistem.aktifOtelGetir().kiralamaListesiGetir())
-			System.out.println("Oda: " + ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getKiralananOda().odaIDGetir() + " | Ad: " + 
-					((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getKiralayanMusteri().adGetir() + " | Giris:" + ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).baslangicTarihiGetir().get(GregorianCalendar.YEAR) + "/" 
-					+ ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).baslangicTarihiGetir().get(GregorianCalendar.MONTH) + "/" + ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).baslangicTarihiGetir().get(GregorianCalendar.DAY_OF_MONTH) +
-					" | Cikis:" + ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getBitisTarihi().get(GregorianCalendar.YEAR) + "/" + ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getBitisTarihi().get(GregorianCalendar.MONTH) + "/" +
-					((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getBitisTarihi().get(GregorianCalendar.DAY_OF_MONTH) + " | Kalınan gün sayısı : "+((Kiralama) Facade.getInstance().get(i, Kiralama.class)).gunSayisiniGetir()+" | Günlük Fiyat : "+((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getKiralananOda().tutarOgren() + "| Fiyat: " + ((Kiralama) Facade.getInstance().get(i, Kiralama.class)).getFiyat() );
+		for (Kiralama k: sistem.aktifOtelGetir().kiralamaListesiGetir())
+			System.out.println("Oda: " + k.getKiralananOda().odaIDGetir() + " | Ad: " + 
+					k.getKiralayanMusteri().adGetir() + " | Giris:" + k.baslangicTarihiGetir().get(GregorianCalendar.YEAR) + "/" 
+					+ k.baslangicTarihiGetir().get(GregorianCalendar.MONTH) + "/" + k.baslangicTarihiGetir().get(GregorianCalendar.DAY_OF_MONTH) +
+					" | Cikis:" + k.getBitisTarihi().get(GregorianCalendar.YEAR) + "/" + k.getBitisTarihi().get(GregorianCalendar.MONTH) + "/" +
+					k.getBitisTarihi().get(GregorianCalendar.DAY_OF_MONTH) + " | Kalınan gün sayısı : "+k.gunSayisiniGetir()+" | Günlük Fiyat : "+k.getKiralananOda().tutarOgren() + "| Fiyat: " + k.getFiyat() );
 		in.nextLine();
 		in.nextLine();
 		
@@ -399,8 +405,8 @@ public class Sistem {
 	
 	public boolean menuOdaEkleme(Sistem sistem){
 		Oda _oda = sistem.odaEklemeIsleminiBaslat();
-		for (Integer i: sistem.aktifOtelGetir().kataloglariGetir()){
-			System.out.println(((OdaKatalogu) Facade.getInstance().get(i, OdaKatalogu.class)).katalogIDGetir()+": "+ ((OdaKatalogu) Facade.getInstance().get(i, OdaKatalogu.class)).isimGetir());	
+		for (OdaKatalogu k: sistem.aktifOtelGetir().kataloglariGetir()){
+			System.out.println(k.katalogIDGetir()+": "+ k.isimGetir());	
 		}
 		System.out.println("\nKatalog ID seçiniz: ");
 		int __katalogID = in.nextInt();
@@ -435,9 +441,9 @@ public class Sistem {
 	}
 	
 	public boolean menuResepsiyonistListeleme(Sistem sistem){
-		for (Integer i: sistem.aktifOtelGetir().getReceptionistList())
-			System.out.println("Resepsiyonist Adı: " + ((Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class)).isimGetir() + " Soyadi: " + ((Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class)).soyisimGetir() +
-					" ID: " + ((Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class)).resepsiyonistIDGetir());
+		for (Resepsiyonist r: sistem.aktifOtelGetir().getReceptionistList())
+			System.out.println("Resepsiyonist Adı: " + r.isimGetir() + " Soyadi: " + r.soyisimGetir() +
+					" ID: " + r.resepsiyonistIDGetir());
 		in.nextLine();
 		in.nextLine();
 		
@@ -456,22 +462,18 @@ public class Sistem {
 		varsayilanResepsiyonist.resepsiyonistOzellikleriniGir("Jack", "Torrance", 237);
 		Oda varsayilanOda = varsayilanOtel.odaYarat();
 		varsayilanOda.odaOzellikleriBelirt(237);
-<<<<<<< HEAD
 		OdaKatalogu katalog = new OdaKatalogu("Room 237", 237, (float) 237);
 		varsayilanOda.odaKataloguAyarla(katalog.getID());
-=======
-		varsayilanOda.odaKataloguAyarla(new OdaKatalogu("Room 237", 237, (float) 237).getID());
->>>>>>> 23f3d1e30c7a3bb8e5de9be000d4257b2363855b
 		
 		Musteri varsayilanMusteri = varsayilanOtel.musteriKaydiIsleminiBaslat();
 		varsayilanMusteri.bilgileriKaydet("Jack", "Torrance", 237, (short) 237);
 		
 		Kiralama varsayilanKiralama = new Kiralama(varsayilanMusteri.getID());
-		varsayilanOtel.uygunOdaSec(237, varsayilanKiralama.getID());
+		varsayilanOtel.uygunOdaSec(237, varsayilanKiralama);
 		varsayilanOtel.kiralamaTarihiSec(new GregorianCalendar(2011, 2, 3), 
 				new GregorianCalendar(2011, 2, 7), varsayilanKiralama);
 		
-		varsayilanOtel.kiralamaSonlandir(varsayilanKiralama.getID());
+		varsayilanOtel.kiralamaSonlandir(varsayilanKiralama);
 		
 //		sistem.otelListesi.add(varsayilanOtel);
 	    
