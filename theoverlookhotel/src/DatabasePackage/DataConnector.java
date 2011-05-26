@@ -14,14 +14,12 @@ public class DataConnector {
 	private Connection con;
 	private ResultSet rs;
 		
-	//mysql strings for enginDesktop machine
 	private String MYSQL_PORT="3306";
 	private String MYSQL_IP="localhost";
-	private String MYSQL_DATABASE_NAME="gemi_takip";
+	private String MYSQL_DATABASE_NAME="theoverlookhotel";
 	private String MYSQL_USERNAME="root";
 	private String MYSQL_PASSWORD="";
-	//End of mysql strings for enginDesktop machine
-	
+
 	private DataConnector(){
 		startConnection();
 	}
@@ -99,6 +97,11 @@ public class DataConnector {
 		finally {
 			}
 		return rowCount;
+	}
+	
+	public static void main(String[] args) {
+		DataConnector a = new DataConnector();
+		System.out.println(a.startConnection());
 	}
 	
 }

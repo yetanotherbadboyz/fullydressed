@@ -269,7 +269,7 @@ public class Otel {
 	public void katalogSec(int __katalogID, Oda oda) {
 		
 		OdaKatalogu katalog = katalogGetir(__katalogID); 
-		oda.katalogSec(katalog);
+		oda.katalogSec(__katalogID);
 	}
 
 	public Object resepsiyonistGetir(int __id) {
