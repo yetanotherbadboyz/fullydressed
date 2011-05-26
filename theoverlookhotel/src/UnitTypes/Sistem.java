@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import DatabasePackage.Facade;
+import DatabasePackage.SaveWithDatabase;
 
 
 public class Sistem {
@@ -453,6 +454,7 @@ public class Sistem {
 	
 	public static void main(String[] args) {
 		Sistem sistem = new Sistem();
+		Facade.getInstance().setSaveAPI(new SaveWithDatabase());
 		/* Varsayılan Sınıflar */ /*
 		Otel varsayilanOtel = new Otel("The Overlook Hotel");
 		varsayilanOtel.otelIDAyarla(237);
