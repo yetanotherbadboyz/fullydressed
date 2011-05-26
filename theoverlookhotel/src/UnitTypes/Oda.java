@@ -13,11 +13,13 @@ public class Oda {
 		this.odaID = _odaID;
 		this.uygunluk = true;
 		this.bosOlma = true;
+		this.setID(Facade.getInstance().getAvailableID(Oda.class));
 	}
 	
 	public Oda() {
 		this.uygunluk = true;
 		this.bosOlma = true;
+		this.setID(Facade.getInstance().getAvailableID(Oda.class));
 	}
 
 	public void setID(int ID){
@@ -60,11 +62,12 @@ public class Oda {
 
 	public void odaOzellikleriBelirt(int odaNo) {
 		odaIDAyarla(odaNo);
+		Facade.getInstance().set(this, Oda.class);
 		
 	}
 
-	public void katalogSec(int katalogID) {
-		this.odaKataloguID = katalogID;
+	public void katalogSec(OdaKatalogu katalog) {
+		this.odaKataloguID = katalog.getID();
 		
 	}
 

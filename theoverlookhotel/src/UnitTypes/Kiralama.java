@@ -22,7 +22,13 @@ public class Kiralama {
 		this.kiralayanMusteriID = _kiralayanMusteriID;
 		this.uygunluk = true;
 		this.sonlanma = false;
+		this.setID(Facade.getInstance().getAvailableID(Kiralama.class));
 		
+	}
+	
+	public Kiralama(Musteri musteri){
+		this.kiralayanMusteriID = musteri.getID();
+		this.setID(Facade.getInstance().getAvailableID(Kiralama.class));
 	}
 	
 	public Kiralama() {
@@ -109,6 +115,7 @@ public class Kiralama {
 	
 	public void sonlandir(){
 		this.sonlanma = true;
+		Facade.getInstance().set(this, Kiralama.class);
 	}
 
     public int gunSayisiniGetir() {

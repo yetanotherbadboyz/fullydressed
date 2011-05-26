@@ -18,11 +18,13 @@ public class Musteri {
 		this.yas = _yas;
 		this.uygunluk = true;
 		this.musteriTipiID = musteriTipiID;
+		this.setID(Facade.getInstance().getAvailableID(Musteri.class));
 	}
 
 	public Musteri() {
 		this.uygunluk = true;
 		this.musteriTipiID = (new MusteriTipi("Standart")).getID();
+		this.setID(Facade.getInstance().getAvailableID(Musteri.class));
 	}
 
 	public void setID(int ID){
@@ -79,6 +81,7 @@ public class Musteri {
 		soyadAyarla(musteriSoyadi);
 		tcKimlikNoAyarla(musteriTcKimlikNo);
 		yasAyarla(yas);
+		Facade.getInstance().set(this, Musteri.class);
 	}
 
 }

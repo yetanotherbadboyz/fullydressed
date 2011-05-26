@@ -1,5 +1,7 @@
 package UnitTypes;
 
+import DatabasePackage.Facade;
+
 public class Resepsiyonist {
 	private int ID;
 	private String isim;
@@ -12,11 +14,13 @@ public class Resepsiyonist {
 		this.soyisim = _soyisim;
 		this.resepsiyonistID = _receptionistID;
 		this.uygunluk = true;
+		this.setID(Facade.getInstance().getAvailableID(Resepsiyonist.class));
 	}
 	
 	
 	public Resepsiyonist() {
 		super();
+		this.setID(Facade.getInstance().getAvailableID(Resepsiyonist.class));
 	}
 	public void setID(int ID){
 		this.ID = ID;
@@ -56,6 +60,7 @@ public class Resepsiyonist {
 		isimAyarla(_ad);
 		soyisimAyarla(_soyad);
 		resepsiyonistIDAyarla(_resepsiyonistID);
+		Facade.getInstance().set(this, Resepsiyonist.class);
 	}
 
 }

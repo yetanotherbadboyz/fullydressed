@@ -454,7 +454,8 @@ public class Sistem {
 		varsayilanResepsiyonist.resepsiyonistOzellikleriniGir("Jack", "Torrance", 237);
 		Oda varsayilanOda = varsayilanOtel.odaYarat();
 		varsayilanOda.odaOzellikleriBelirt(237);
-		varsayilanOda.odaKataloguAyarla(new OdaKatalogu("Room 237", 237, (float) 237));
+		OdaKatalogu katalog = new OdaKatalogu("Room 237", 237, (float) 237);
+		varsayilanOda.odaKataloguAyarla(katalog.getID());
 		
 		Musteri varsayilanMusteri = varsayilanOtel.musteriKaydiIsleminiBaslat();
 		varsayilanMusteri.bilgileriKaydet("Jack", "Torrance", 237, (short) 237);

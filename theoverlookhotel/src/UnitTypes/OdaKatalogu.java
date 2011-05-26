@@ -20,6 +20,8 @@ public class OdaKatalogu {
 		musteriTipleri.add(_musteriTipi1.getID());
 		MusteriTipi _musteriTipi2 = new MusteriTipi("VIP");
 		musteriTipleri.add(_musteriTipi2.getID());
+		this.setID(Facade.getInstance().getAvailableID(OdaKatalogu.class));
+		Facade.getInstance().set(this, MusteriTipi.class);
 	}
 	
 	public void setID(int ID){

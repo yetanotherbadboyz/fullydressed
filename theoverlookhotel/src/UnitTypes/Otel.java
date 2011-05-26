@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import javax.sound.midi.Receiver;
+
 import DatabasePackage.Facade;
 
 
@@ -64,9 +66,9 @@ public class Otel {
 		return _musteri;
 	}
 	
-	public void musteriKayitBilgileriniGonder(int musteriID, String musteriAdi, String musteriSoyadi, 
+	public void musteriKayitBilgileriniGonder(Musteri musteri, String musteriAdi, String musteriSoyadi, 
 			long musteriTcKimlikNo, short yas) {
-		((Musteri) Facade.getInstance().get(musteriID, Musteri.class)).bilgileriKaydet(musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
+		musteri.bilgileriKaydet(musteriAdi, musteriSoyadi, musteriTcKimlikNo, yas);
 	}
 
 	public int otelIDGetir() {
@@ -91,6 +93,7 @@ public class Otel {
 		this.katalogEkle(katalog2.getID());
 		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3, (float) 1.0);
 		this.katalogEkle(katalog3.getID());
+		this.setID(Facade.getInstance().getAvailableID(Otel.class));
 		
 	}
 	
@@ -106,6 +109,7 @@ public class Otel {
 		this.katalogEkle(katalog2.getID());
 		OdaKatalogu katalog3 = new OdaKatalogu("ekonomik", 3, (float) 1.0);
 		this.katalogEkle(katalog3.getID());
+		this.setID(Facade.getInstance().getAvailableID(Otel.class));
 	}
 	
 	public int resepsiyonistEkle(String _isim, String _soyisim){
@@ -164,7 +168,7 @@ public class Otel {
 		List<Oda> _innerList = new ArrayList<Oda>();
 		for (Integer i: odaListesi){
 			if (((Oda) Facade.getInstance().get(i.intValue(), Oda.class)).uygunMu(musteri) &&
-					((Oda) Facade.getInstance().get(i.intValue(), Oda.class)).bosMu())
+					((Oda) Facade.getInstance().get(i.intValue(), Oda.class)).uygunMu(musteri))
 				_innerList.add(((Oda) Facade.getInstance().get(i.intValue(), Oda.class)));
 		}
 		return _innerList;
@@ -200,8 +204,13 @@ public class Otel {
 	public void setRoomList(List<Integer> roomList) {
 		this.odaListesi = roomList;
 	}
-	public List<Integer> getReceptionistList() {
-		return resepsiyonistListesi;
+	public List<Resepsiyonist> getReceptionistList() {
+		List<Resepsiyonist> liste= new ArrayList<Resepsiyonist>();
+		for (Integer i:this.resepsiyonistListesi){
+			Resepsiyonist resepsiyonist = (Resepsiyonist) Facade.getInstance().get(i, Resepsiyonist.class);
+			liste.add(resepsiyonist);
+		}
+		return liste;
 	}
 	public void setReceptionistList(List<Integer> receptionistList) {
 		this.resepsiyonistListesi = receptionistList;
@@ -231,11 +240,12 @@ public class Otel {
 		isimAyarla(_otelAdi);
 		otelIDAyarla(_otelID);
 		adresAyarla(__adres);
+		Facade.getInstance().set(this, Otel.class);
 	}
 
-	public void uygunOdaSec(int odaID, int kiralamaID) {
+	public void uygunOdaSec(int odaID, Kiralama k) {
 		Oda oda = this.odaGetir(odaID);
-		((Kiralama) Facade.getInstance().get(kiralamaID, Kiralama.class)).odaSec(oda.getID());
+		k.odaSec(oda.getID());
 	}
 
 	public float kiralamaTarihiSec(GregorianCalendar _baslangicTarihi,
@@ -245,21 +255,29 @@ public class Otel {
 		return tutar;
 	}
 
-	public void kiralamaSonlandir(int kiralamaID) {
-		((Kiralama) Facade.getInstance().get(kiralamaID, Kiralama.class)).sonlandir();
-		kiralamaListesi.add(kiralamaID);
+	public void kiralamaSonlandir(Kiralama kiralama) {
+		kiralama.sonlandir();
+		kiralamaListesi.add(kiralama.getID());
 	}
 	
-	public List<Integer> kiralamaListesiGetir(){
-		return this.kiralamaListesi;
+	public List<Kiralama> kiralamaListesiGetir(){
+		List<Kiralama> liste = new ArrayList<Kiralama>();
+		for (Integer i: this.kiralamaListesi){
+			liste.add((Kiralama) Facade.getInstance().get(i.intValue(), Kiralama.class));
+		}
+		return liste;
 	}
 	
-	public List<Integer> kataloglariGetir() {
-		return this.katalogListesi;
+	public List<OdaKatalogu> kataloglariGetir() {
+		List<OdaKatalogu> liste = new ArrayList<OdaKatalogu>();
+		for (Integer i: this.katalogListesi){
+			liste.add((OdaKatalogu) Facade.getInstance().get(i.intValue(), OdaKatalogu.class));
+		}
+		return liste;
 	}
 	
 	public OdaKatalogu katalogGetir(int _katalogID){
-		for (Integer i: this.kataloglariGetir()){
+		for (Integer i: this.katalogListesi){
 			if (((OdaKatalogu) Facade.getInstance().get(i.intValue(), OdaKatalogu.class)).katalogIDGetir() == _katalogID)
 				return ((OdaKatalogu) Facade.getInstance().get(i.intValue(), OdaKatalogu.class));
 		}
@@ -273,7 +291,7 @@ public class Otel {
 	}
 
 	public Object resepsiyonistGetir(int __id) {
-		for (Integer i: this.getReceptionistList()){
+		for (Integer i: this.resepsiyonistListesi){
 			if (((Resepsiyonist) Facade.getInstance().get(i.intValue(), Resepsiyonist.class)).resepsiyonistIDGetir() == __id)
 				return ((Resepsiyonist) Facade.getInstance().get(i.intValue(), Resepsiyonist.class));
 		}

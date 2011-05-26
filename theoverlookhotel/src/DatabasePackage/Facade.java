@@ -31,4 +31,10 @@ public class Facade {
 		IMapper mapper = MapperFactory.getMapper(objectClass);					// to any type here, this must be done in controller class
 		return mapper.getAll();
 	}
+	
+	public int getAvailableID(Object objectClass){
+		
+		IMapper mapper = MapperFactory.getMapper(objectClass);
+		return mapper.getAvailableID();
+	}
 }
